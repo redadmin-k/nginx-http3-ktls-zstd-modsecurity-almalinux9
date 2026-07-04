@@ -1,0 +1,22 @@
+2026-07-04 21:56:10,468 - Mock Version: 6.7
+2026-07-04 21:56:10,472 - Start(bootstrap): chroot init
+2026-07-04 21:56:10,480 - Start(bootstrap): cleaning package manager metadata
+2026-07-04 21:56:10,482 - Finish(bootstrap): cleaning package manager metadata
+2026-07-04 21:56:11,027 - Finish(bootstrap): chroot init
+2026-07-04 21:56:11,028 - Start: chroot init
+2026-07-04 21:56:11,032 - Start: unpacking root cache
+2026-07-04 21:56:12,855 - Finish: unpacking root cache
+2026-07-04 21:56:12,857 - Start: cleaning package manager metadata
+2026-07-04 21:56:12,886 - Finish: cleaning package manager metadata
+2026-07-04 21:56:13,519 - Start: dnf4 update
+2026-07-04 21:56:35,107 - Finish: dnf4 update
+2026-07-04 21:56:35,514 - Finish: chroot init
+2026-07-04 21:56:35,515 - Start: build phase for nginx-1.30.3-1.alma9.ngx.src.rpm
+2026-07-04 21:56:35,515 - Start: build setup for nginx-1.30.3-1.alma9.ngx.src.rpm
+2026-07-04 21:57:21,467 - Finish: build setup for nginx-1.30.3-1.alma9.ngx.src.rpm
+2026-07-04 21:57:21,467 - Start: rpmbuild nginx-1.30.3-1.alma9.ngx.src.rpm
+2026-07-04 21:57:21,467 - Start: Outputting list of installed packages
+2026-07-04 21:57:21,747 - Finish: Outputting list of installed packages
+2026-07-04 23:14:47,618 - Finish: rpmbuild nginx-1.30.3-1.alma9.ngx.src.rpm
+2026-07-04 23:14:48,105 - Finish: build phase for nginx-1.30.3-1.alma9.ngx.src.rpm
+2026-07-04 23:14:48,108 - Finish: run
