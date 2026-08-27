@@ -2,12 +2,12 @@
 
 This repository provides an unofficial Nginx RPM build for AlmaLinux 9.
 
-This build includes HTTP/3, OpenSSL 3.5.7, KTLS, zstd compression, and ModSecurity WAF integration.
+This build includes HTTP/3, OpenSSL 3.5.8, KTLS, zstd compression, and ModSecurity WAF integration.
 
 ## Features
 
 - Nginx 1.30.4
-- OpenSSL 3.5.7
+- OpenSSL 3.5.8
 - HTTP/3 / QUIC
 - KTLS
 - zstd compression via `zstd-nginx-module`
@@ -89,9 +89,9 @@ sudo systemctl restart nginx
 OS: AlmaLinux 9 x86_64
 Build Tool: mock
 Mock Config: alma+epel-9-x86_64
-Nginx Version: 1.30.3
-OpenSSL Version: 3.5.7
-ModSecurity Version: 3.0.15
+Nginx Version: 1.30.4
+OpenSSL Version: 3.5.8
+ModSecurity Version: 3.0.16
 ```
 
 Additional modules:
@@ -103,7 +103,7 @@ zstd-nginx-module
 
 ## Build Details
 
-This build uses OpenSSL 3.5.7 for TLS, HTTP/3, QUIC, and KTLS support.
+This build uses OpenSSL 3.5.8 for TLS, HTTP/3, QUIC, and KTLS support.
 
 Check the OpenSSL version reported by Nginx:
 
@@ -114,7 +114,7 @@ nginx -V 2>&1 | grep -E 'built with OpenSSL|running with OpenSSL'
 Expected output example:
 
 ```text
-built with OpenSSL 3.5.7
+built with OpenSSL 3.5.8
 ```
 
 Confirm that Nginx was built with the ModSecurity connector:
