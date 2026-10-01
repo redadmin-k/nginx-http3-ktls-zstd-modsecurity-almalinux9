@@ -1,22 +1,22 @@
-2026-09-22 00:19:37,069 - Mock Version: 6.8
-2026-09-22 00:19:37,074 - Start(bootstrap): chroot init
-2026-09-22 00:19:37,081 - Start(bootstrap): cleaning package manager metadata
-2026-09-22 00:19:37,085 - Finish(bootstrap): cleaning package manager metadata
-2026-09-22 00:19:37,703 - Finish(bootstrap): chroot init
-2026-09-22 00:19:37,704 - Start: chroot init
-2026-09-22 00:19:37,709 - Start: cleaning package manager metadata
-2026-09-22 00:19:37,737 - Finish: cleaning package manager metadata
-2026-09-22 00:19:38,281 - Start: installing minimal buildroot with dnf
-2026-09-22 00:21:08,141 - Finish: installing minimal buildroot with dnf
-2026-09-22 00:21:08,394 - Start: creating root cache
-2026-09-22 00:21:12,163 - Finish: creating root cache
-2026-09-22 00:21:12,174 - Finish: chroot init
-2026-09-22 00:21:12,356 - Start: build phase for nginx-1.30.5-1.alma9.src.rpm
-2026-09-22 00:21:12,356 - Start: build setup for nginx-1.30.5-1.alma9.src.rpm
-2026-09-22 00:21:58,293 - Finish: build setup for nginx-1.30.5-1.alma9.src.rpm
-2026-09-22 00:21:58,293 - Start: rpmbuild nginx-1.30.5-1.alma9.src.rpm
-2026-09-22 00:21:58,295 - Start: Outputting list of installed packages
-2026-09-22 00:21:58,525 - Finish: Outputting list of installed packages
-2026-09-22 00:30:06,832 - Finish: rpmbuild nginx-1.30.5-1.alma9.src.rpm
-2026-09-22 00:30:07,346 - Finish: build phase for nginx-1.30.5-1.alma9.src.rpm
-2026-09-22 00:30:07,350 - Finish: run
+2026-09-30 19:10:26,844 - Mock Version: 6.8
+2026-09-30 19:10:26,847 - Start(bootstrap): chroot init
+2026-09-30 19:10:27,438 - Start(bootstrap): cleaning package manager metadata
+2026-09-30 19:10:27,438 - Finish(bootstrap): cleaning package manager metadata
+2026-09-30 19:10:28,147 - Finish(bootstrap): chroot init
+2026-09-30 19:10:28,148 - Start: chroot init
+2026-09-30 19:10:28,153 - Start: unpacking root cache
+2026-09-30 19:10:34,006 - Finish: unpacking root cache
+2026-09-30 19:10:34,008 - Start: cleaning package manager metadata
+2026-09-30 19:10:34,011 - Finish: cleaning package manager metadata
+2026-09-30 19:10:35,329 - Start: dnf4 update
+2026-09-30 19:15:03,854 - Finish: dnf4 update
+2026-09-30 19:15:14,400 - Finish: chroot init
+2026-09-30 19:15:14,401 - Start: build phase for nginx-1.30.5-1.alma9.src.rpm
+2026-09-30 19:15:14,401 - Start: build setup for nginx-1.30.5-1.alma9.src.rpm
+2026-09-30 19:27:18,622 - Finish: build setup for nginx-1.30.5-1.alma9.src.rpm
+2026-09-30 19:27:18,622 - Start: rpmbuild nginx-1.30.5-1.alma9.src.rpm
+2026-09-30 19:27:18,624 - Start: Outputting list of installed packages
+2026-09-30 19:27:18,861 - Finish: Outputting list of installed packages
+2026-09-30 20:25:07,365 - Finish: rpmbuild nginx-1.30.5-1.alma9.src.rpm
+2026-09-30 20:25:07,873 - Finish: build phase for nginx-1.30.5-1.alma9.src.rpm
+2026-09-30 20:25:07,876 - Finish: run
