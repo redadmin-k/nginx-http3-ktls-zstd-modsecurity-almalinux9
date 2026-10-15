@@ -1,4 +1,4 @@
-INFO buildroot.py:704:  Mock Version: 6.8
+INFO buildroot.py:704:  Mock Version: 6.9
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64/root
 DEBUG file_util.py:20:  created dir: /var/lib/mock/alma+epel-9-x86_64/root
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64-bootstrap
@@ -32,7 +32,7 @@ DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/dev/shm
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/dev/mapper
 DEBUG file_util.py:20:  created dir: /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/dev/mapper
-DEBUG buildroot.py:904:  kernel version == 5.14.0-687.51.1.el9_8.x86_64
+DEBUG buildroot.py:904:  kernel version == 5.14.0-687.54.1.el9_8.x86_64
 DEBUG file_util.py:29:  touching file: /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/etc/fstab
 DEBUG file_util.py:29:  touching file: /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/etc/yum/yum.conf
 DEBUG file_util.py:29:  touching file: /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/etc/dnf/dnf.conf
@@ -66,6 +66,18 @@ DEBUG util.py:636:  Executing command: ['cp', '-a', '/usr/share/distribution-gpg
 DEBUG util.py:688:  Child return code was: 0
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/etc/dnf
 DEBUG package_manager.py:693:  configure DNF vars
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/var/cache/yum
+DEBUG util.py:717:  child environment: None
+DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/alma+epel-9-x86_64-bootstrap/yum_cache', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:688:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/var/cache/dnf
+DEBUG util.py:717:  child environment: None
+DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/alma+epel-9-x86_64-bootstrap/dnf_cache', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:688:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/root/mock-localrepo
+DEBUG util.py:717:  child environment: None
+DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/root/mock-localrepo', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root/root/mock-localrepo'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:688:  Child return code was: 0
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/etc
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/etc
 DEBUG buildroot.py:39:  method _cleanup_homedir skipped in bootstrap
@@ -126,19 +138,19 @@ DEBUG util.py:537:  L3 cache:                                64 MiB (4 instances
 DEBUG util.py:537:  NUMA node(s):                            1
 DEBUG util.py:537:  NUMA node0 CPU(s):                       0-3
 DEBUG util.py:537:  Vulnerability Gather data sampling:      Not affected
-DEBUG util.py:537:  Vulnerability Indirect target selection: Mitigation; Aligned branch/return thunks
+DEBUG util.py:537:  Vulnerability Indirect target selection: Not affected
 DEBUG util.py:537:  Vulnerability Itlb multihit:             Not affected
 DEBUG util.py:537:  Vulnerability L1tf:                      Not affected
 DEBUG util.py:537:  Vulnerability Mds:                       Not affected
 DEBUG util.py:537:  Vulnerability Meltdown:                  Not affected
 DEBUG util.py:537:  Vulnerability Mmio stale data:           Not affected
 DEBUG util.py:537:  Vulnerability Old microcode:             Not affected
-DEBUG util.py:537:  Vulnerability Reg file data sampling:    Vulnerable: No microcode
+DEBUG util.py:537:  Vulnerability Reg file data sampling:    Mitigation; Clear Register File
 DEBUG util.py:537:  Vulnerability Retbleed:                  Not affected
 DEBUG util.py:537:  Vulnerability Spec rstack overflow:      Not affected
 DEBUG util.py:537:  Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
 DEBUG util.py:537:  Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
-DEBUG util.py:537:  Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS Not affected; BHI SW loop, KVM SW loop
+DEBUG util.py:537:  Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS Not affected; BHI BHI_DIS_S
 DEBUG util.py:537:  Vulnerability Srbds:                     Not affected
 DEBUG util.py:537:  Vulnerability Tsa:                       Not affected
 DEBUG util.py:537:  Vulnerability Tsx async abort:           Not affected
@@ -147,14 +159,14 @@ DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:636:  Executing command: ['/bin/free', '--human'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:537:                 total        used        free      shared  buff/cache   available
-DEBUG util.py:537:  Mem:           3.6Gi       711Mi       2.0Gi        18Mi       1.1Gi       2.9Gi
-DEBUG util.py:537:  Swap:          3.9Gi       0.0Ki       3.9Gi
+DEBUG util.py:537:  Mem:           3.6Gi       811Mi       1.8Gi        26Mi       1.3Gi       2.8Gi
+DEBUG util.py:537:  Swap:          3.9Gi       1.0Mi       3.9Gi
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:636:  Executing command: ['/bin/df', '-H', '-T', '/var/lib/mock/alma+epel-9-x86_64/root', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:537:  Filesystem     Type  Size  Used Avail Use% Mounted on
-DEBUG util.py:537:  /dev/vda3      xfs    49G   11G   38G  23% /
-DEBUG util.py:537:  /dev/vda3      xfs    49G   11G   38G  23% /
+DEBUG util.py:537:  /dev/vda3      xfs    49G   12G   38G  23% /
+DEBUG util.py:537:  /dev/vda3      xfs    49G   12G   38G  23% /
 DEBUG util.py:688:  Child return code was: 0
 DEBUG buildroot.py:760:  create skeleton dirs
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64/root/var/lib/rpm
@@ -181,7 +193,7 @@ DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_
 DEBUG file_util.py:20:  created dir: /var/lib/mock/alma+epel-9-x86_64/root/dev/shm
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64/root/dev/mapper
 DEBUG file_util.py:20:  created dir: /var/lib/mock/alma+epel-9-x86_64/root/dev/mapper
-DEBUG buildroot.py:904:  kernel version == 5.14.0-687.51.1.el9_8.x86_64
+DEBUG buildroot.py:904:  kernel version == 5.14.0-687.54.1.el9_8.x86_64
 DEBUG file_util.py:29:  touching file: /var/lib/mock/alma+epel-9-x86_64/root/etc/fstab
 DEBUG file_util.py:29:  touching file: /var/lib/mock/alma+epel-9-x86_64/root/etc/yum/yum.conf
 DEBUG file_util.py:29:  touching file: /var/lib/mock/alma+epel-9-x86_64/root/etc/dnf/dnf.conf
@@ -220,7 +232,7 @@ DEBUG util.py:688:  Child return code was: 0
 DEBUG file_util.py:29:  touching file: /var/lib/mock/alma+epel-9-x86_64/root/etc/resolv.conf
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args None
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'dbf2922ff054488394a2b9d3c2d45540', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/sh', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=LANG=C.UTF-8', 'rpm', '-q', 'rpm', 'rpm-sequoia', 'python3-dnf', 'python3-dnf-plugins-core', 'yum', 'yum-utils', 'dnf5', 'dnf5-plugins'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'e5357af3f5d946309c217460b1de4957', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/sh', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=LANG=C.UTF-8', 'rpm', '-q', 'rpm', 'rpm-sequoia', 'python3-dnf', 'python3-dnf-plugins-core', 'yum', 'yum-utils', 'dnf5', 'dnf5-plugins'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:537:  rpm-4.16.1.3-40.el9.x86_64
 DEBUG util.py:537:  package rpm-sequoia is not installed
 DEBUG util.py:537:  python3-dnf-4.14.0-34.el9_8.alma.1.noarch
@@ -248,7 +260,7 @@ DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'remount,priva
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '42ba7b1c982141e2812102a43241fd2f', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qa', '--root', '/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '340af20810ea4390834a912f3b4dc27d', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qa', '--root', '/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:537:  gpg-pubkey-b86b3716-61e69f29
 DEBUG util.py:537:  gpg-pubkey-3228467c-613798eb
 DEBUG util.py:537:  rust-srpm-macros-17-4.el9.noarch
@@ -262,10 +274,9 @@ DEBUG util.py:537:  perl-srpm-macros-1-41.el9.noarch
 DEBUG util.py:537:  openblas-srpm-macros-2-11.el9.noarch
 DEBUG util.py:537:  ocaml-srpm-macros-6-6.el9.noarch
 DEBUG util.py:537:  ghc-srpm-macros-1.5.0-6.el9.noarch
-DEBUG util.py:537:  tzdata-2026c-1.el9_8.noarch
+DEBUG util.py:537:  tzdata-2026e-1.el9_8.noarch
 DEBUG util.py:537:  publicsuffix-list-dafsa-20210518-3.el9.noarch
 DEBUG util.py:537:  pkgconf-m4-1.7.3-10.el9.noarch
-DEBUG util.py:537:  pcre2-syntax-10.40-6.el9.noarch
 DEBUG util.py:537:  ncurses-base-6.2-12.20210508.el9.noarch
 DEBUG util.py:537:  libssh-config-0.10.4-19.el9_8.noarch
 DEBUG util.py:537:  coreutils-common-8.32-41.el9_8.1.x86_64
@@ -277,11 +288,11 @@ DEBUG util.py:537:  filesystem-3.16-5.el9.x86_64
 DEBUG util.py:537:  basesystem-11-13.el9.noarch
 DEBUG util.py:537:  ncurses-libs-6.2-12.20210508.el9.x86_64
 DEBUG util.py:537:  bash-5.1.8-9.el9.x86_64
-DEBUG util.py:537:  glibc-gconv-extra-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-gconv-extra-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  libgcc-11.5.0-14.el9.alma.1.x86_64
-DEBUG util.py:537:  glibc-minimal-langpack-2.34-275.el9_8.x86_64
-DEBUG util.py:537:  glibc-common-2.34-275.el9_8.x86_64
-DEBUG util.py:537:  glibc-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-minimal-langpack-2.34-283.el9_8.x86_64
+DEBUG util.py:537:  glibc-common-2.34-283.el9_8.x86_64
+DEBUG util.py:537:  glibc-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  zlib-1.2.11-40.el9.x86_64
 DEBUG util.py:537:  xz-libs-5.2.5-8.el9_0.x86_64
 DEBUG util.py:537:  bzip2-libs-1.0.8-11.el9.x86_64
@@ -311,7 +322,7 @@ DEBUG util.py:537:  audit-libs-3.1.5-8.el9.x86_64
 DEBUG util.py:537:  libffi-3.4.2-8.el9.x86_64
 DEBUG util.py:537:  libsepol-3.6-3.el9.x86_64
 DEBUG util.py:537:  libsigsegv-2.13-4.el9.x86_64
-DEBUG util.py:537:  gawk-5.1.0-6.el9.x86_64
+DEBUG util.py:537:  gawk-5.1.0-6.el9_8.1.x86_64
 DEBUG util.py:537:  libsmartcols-2.37.4-25.el9.x86_64
 DEBUG util.py:537:  libtasn1-4.16.0-10.el9_8.x86_64
 DEBUG util.py:537:  p11-kit-0.26.4-1.el9_8.x86_64
@@ -324,6 +335,7 @@ DEBUG util.py:537:  zip-3.0-35.el9.x86_64
 DEBUG util.py:537:  zstd-1.5.5-1.el9.x86_64
 DEBUG util.py:537:  groff-base-1.22.4-10.el9.x86_64
 DEBUG util.py:537:  bzip2-1.0.8-11.el9.x86_64
+DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64
 DEBUG util.py:537:  info-6.7-15.el9.x86_64
 DEBUG util.py:537:  ed-1.14.2-12.el9.x86_64
 DEBUG util.py:537:  cpio-2.13-16.el9.x86_64
@@ -331,7 +343,7 @@ DEBUG util.py:537:  diffutils-3.7-12.el9.x86_64
 DEBUG util.py:537:  gdbm-libs-1.23-1.el9.x86_64
 DEBUG util.py:537:  json-c-0.14-11.el9.x86_64
 DEBUG util.py:537:  keyutils-libs-1.6.3-1.el9.x86_64
-DEBUG util.py:537:  libbrotli-1.0.9-9.el9_7.x86_64
+DEBUG util.py:537:  libbrotli-1.0.9-10.el9_8.x86_64
 DEBUG util.py:537:  libdb-5.3.28-57.el9_6.x86_64
 DEBUG util.py:537:  libeconf-0.4.1-7.el9_8.x86_64
 DEBUG util.py:537:  libgomp-11.5.0-14.el9.alma.1.x86_64
@@ -347,12 +359,11 @@ DEBUG util.py:537:  ncurses-6.2-12.20210508.el9.x86_64
 DEBUG util.py:537:  pcre-8.44-4.el9.x86_64
 DEBUG util.py:537:  grep-3.6-5.el9.x86_64
 DEBUG util.py:537:  xz-5.2.5-8.el9_0.x86_64
-DEBUG util.py:537:  pcre2-10.40-6.el9.x86_64
 DEBUG util.py:537:  libselinux-3.6-3.el9.x86_64
 DEBUG util.py:537:  sed-4.8-10.el9.x86_64
 DEBUG util.py:537:  findutils-4.8.0-7.el9.x86_64
-DEBUG util.py:537:  openssl-fips-provider-3.5.8-1.el9_8.x86_64
-DEBUG util.py:537:  openssl-libs-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-fips-provider-3.5.8-2.el9_8.x86_64
+DEBUG util.py:537:  openssl-libs-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  coreutils-8.32-41.el9_8.1.x86_64
 DEBUG util.py:537:  ca-certificates-2025.2.80_v9.0.305-91.el9.noarch
 DEBUG util.py:537:  libblkid-2.37.4-25.el9.x86_64
@@ -424,7 +435,7 @@ DEBUG util.py:537:  perl-Encode-3.08-462.el9.x86_64
 DEBUG util.py:537:  perl-libs-5.32.1-484.el9_8.x86_64
 DEBUG util.py:537:  perl-interpreter-5.32.1-484.el9_8.x86_64
 DEBUG util.py:537:  kernel-srpm-macros-1.0-14.el9.noarch
-DEBUG util.py:537:  openssl-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  libpwquality-1.4.4-8.el9.x86_64
 DEBUG util.py:537:  pam-1.5.1-28.el9_8.1.x86_64
 DEBUG util.py:537:  libevent-2.1.13-1.el9_8.x86_64
@@ -445,7 +456,7 @@ DEBUG util.py:537:  elfutils-debuginfod-client-0.194-1.el9.alma.1.x86_64
 DEBUG util.py:537:  binutils-gold-2.35.2-72.el9.x86_64
 DEBUG util.py:537:  binutils-2.35.2-72.el9.x86_64
 DEBUG util.py:537:  elfutils-0.194-1.el9.alma.1.x86_64
-DEBUG util.py:537:  gdb-minimal-16.3-3.el9.x86_64
+DEBUG util.py:537:  gdb-minimal-16.3-3.1.el9_8.x86_64
 DEBUG util.py:537:  debugedit-5.0-11.el9.x86_64
 DEBUG util.py:537:  rpm-build-libs-4.16.1.3-40.el9.x86_64
 DEBUG util.py:537:  fonts-srpm-macros-2.0.5-7.el9.1.noarch
@@ -460,9 +471,10 @@ DEBUG util.py:537:  R-srpm-macros-1.3.7-2.el9.noarch
 DEBUG util.py:537:  epel-rpm-macros-9-18.el9.noarch
 DEBUG util.py:537:  util-linux-2.37.4-25.el9.x86_64
 DEBUG util.py:537:  which-2.21-30.el9_6.x86_64
-DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.7.x86_64
-DEBUG util.py:537:  curl-7.76.1-40.el9_8.7.x86_64
-DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64
+DEBUG util.py:537:  pcre2-syntax-10.40-7.el9_8.noarch
+DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.8.x86_64
+DEBUG util.py:537:  curl-7.76.1-40.el9_8.8.x86_64
+DEBUG util.py:537:  pcre2-10.40-7.el9_8.x86_64
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:200:  kill orphans in chroot /var/lib/mock/alma+epel-9-x86_64/root
 DEBUG util.py:200:  kill orphans in chroot /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/var/lib/mock/alma+epel-9-x86_64/root
@@ -503,7 +515,7 @@ DEBUG util.py:717:  child environment: None
 DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/alma+epel-9-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
-DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.ow0x98l1', '/var/lib/mock/alma+epel-9-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.7ydvuxb0', '/var/lib/mock/alma+epel-9-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:688:  Child return code was: 0
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64/root/sys/fs/selinux
 DEBUG util.py:717:  child environment: None
@@ -524,14 +536,14 @@ DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_
 DEBUG package_manager.py:296:  ['/usr/bin/dnf-3', '--installroot', '/var/lib/mock/alma+epel-9-x86_64/root/', '-y', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'update']
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'c6f414196c9e4ccf8de178e015839011', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/var/lib/mock/alma+epel-9-x86_64/root/installation-homedir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--setenv=LC_MESSAGES=C.UTF-8', '/usr/bin/dnf-3', '--installroot', '/var/lib/mock/alma+epel-9-x86_64/root/', '-y', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'update', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/alma+epel-9-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '7b01d8f339484e37815b5ae30d80abfa', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/var/lib/mock/alma+epel-9-x86_64/root/installation-homedir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--setenv=LC_MESSAGES=C.UTF-8', '/usr/bin/dnf-3', '--installroot', '/var/lib/mock/alma+epel-9-x86_64/root/', '-y', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'update', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/alma+epel-9-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:535:  No matches found for the following disable plugin patterns: local, spacewalk, versionlock
-DEBUG util.py:537:  AlmaLinux 9 - BaseOS                                                                                                                                         1.1 kB/s | 3.8 kB     00:03    
-DEBUG util.py:537:  AlmaLinux 9 - AppStream                                                                                                                                      3.3 kB/s | 4.2 kB     00:01    
-DEBUG util.py:537:  AlmaLinux 9 - CRB                                                                                                                                            2.1 kB/s | 4.2 kB     00:01    
-DEBUG util.py:537:  AlmaLinux 9 - Extras                                                                                                                                         2.4 kB/s | 3.3 kB     00:01    
-DEBUG util.py:537:  Extra Packages for Enterprise Linux 9 - x86_64                                                                                                               4.0 kB/s | 7.4 kB     00:01    
-DEBUG util.py:537:  mock-localrepo                                                                                                                                               2.4 MB/s | 3.0 kB     00:00    
+DEBUG util.py:537:  AlmaLinux 9 - BaseOS                                                                                                                                         4.2 kB/s | 3.8 kB     00:00    
+DEBUG util.py:537:  AlmaLinux 9 - AppStream                                                                                                                                      4.9 kB/s | 4.2 kB     00:00    
+DEBUG util.py:537:  AlmaLinux 9 - CRB                                                                                                                                            5.1 kB/s | 4.2 kB     00:00    
+DEBUG util.py:537:  AlmaLinux 9 - Extras                                                                                                                                         3.8 kB/s | 3.3 kB     00:00    
+DEBUG util.py:537:  Extra Packages for Enterprise Linux 9 - x86_64                                                                                                                11 kB/s |  10 kB     00:00    
+DEBUG util.py:537:  mock-localrepo                                                                                                                                               2.9 MB/s | 3.0 kB     00:00    
 DEBUG util.py:537:  Dependencies resolved.
 DEBUG util.py:537:  Nothing to do.
 DEBUG util.py:537:  Complete!
@@ -581,7 +593,7 @@ DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'remount,priva
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '474dc8599f0244558f47f724062a15f3', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qa', '--root', '/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '3055138e7e1041f68c42aab313b4479a', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qa', '--root', '/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:537:  gpg-pubkey-b86b3716-61e69f29
 DEBUG util.py:537:  gpg-pubkey-3228467c-613798eb
 DEBUG util.py:537:  rust-srpm-macros-17-4.el9.noarch
@@ -595,10 +607,9 @@ DEBUG util.py:537:  perl-srpm-macros-1-41.el9.noarch
 DEBUG util.py:537:  openblas-srpm-macros-2-11.el9.noarch
 DEBUG util.py:537:  ocaml-srpm-macros-6-6.el9.noarch
 DEBUG util.py:537:  ghc-srpm-macros-1.5.0-6.el9.noarch
-DEBUG util.py:537:  tzdata-2026c-1.el9_8.noarch
+DEBUG util.py:537:  tzdata-2026e-1.el9_8.noarch
 DEBUG util.py:537:  publicsuffix-list-dafsa-20210518-3.el9.noarch
 DEBUG util.py:537:  pkgconf-m4-1.7.3-10.el9.noarch
-DEBUG util.py:537:  pcre2-syntax-10.40-6.el9.noarch
 DEBUG util.py:537:  ncurses-base-6.2-12.20210508.el9.noarch
 DEBUG util.py:537:  libssh-config-0.10.4-19.el9_8.noarch
 DEBUG util.py:537:  coreutils-common-8.32-41.el9_8.1.x86_64
@@ -610,11 +621,11 @@ DEBUG util.py:537:  filesystem-3.16-5.el9.x86_64
 DEBUG util.py:537:  basesystem-11-13.el9.noarch
 DEBUG util.py:537:  ncurses-libs-6.2-12.20210508.el9.x86_64
 DEBUG util.py:537:  bash-5.1.8-9.el9.x86_64
-DEBUG util.py:537:  glibc-gconv-extra-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-gconv-extra-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  libgcc-11.5.0-14.el9.alma.1.x86_64
-DEBUG util.py:537:  glibc-minimal-langpack-2.34-275.el9_8.x86_64
-DEBUG util.py:537:  glibc-common-2.34-275.el9_8.x86_64
-DEBUG util.py:537:  glibc-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-minimal-langpack-2.34-283.el9_8.x86_64
+DEBUG util.py:537:  glibc-common-2.34-283.el9_8.x86_64
+DEBUG util.py:537:  glibc-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  zlib-1.2.11-40.el9.x86_64
 DEBUG util.py:537:  xz-libs-5.2.5-8.el9_0.x86_64
 DEBUG util.py:537:  bzip2-libs-1.0.8-11.el9.x86_64
@@ -644,7 +655,7 @@ DEBUG util.py:537:  audit-libs-3.1.5-8.el9.x86_64
 DEBUG util.py:537:  libffi-3.4.2-8.el9.x86_64
 DEBUG util.py:537:  libsepol-3.6-3.el9.x86_64
 DEBUG util.py:537:  libsigsegv-2.13-4.el9.x86_64
-DEBUG util.py:537:  gawk-5.1.0-6.el9.x86_64
+DEBUG util.py:537:  gawk-5.1.0-6.el9_8.1.x86_64
 DEBUG util.py:537:  libsmartcols-2.37.4-25.el9.x86_64
 DEBUG util.py:537:  libtasn1-4.16.0-10.el9_8.x86_64
 DEBUG util.py:537:  p11-kit-0.26.4-1.el9_8.x86_64
@@ -657,6 +668,7 @@ DEBUG util.py:537:  zip-3.0-35.el9.x86_64
 DEBUG util.py:537:  zstd-1.5.5-1.el9.x86_64
 DEBUG util.py:537:  groff-base-1.22.4-10.el9.x86_64
 DEBUG util.py:537:  bzip2-1.0.8-11.el9.x86_64
+DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64
 DEBUG util.py:537:  info-6.7-15.el9.x86_64
 DEBUG util.py:537:  ed-1.14.2-12.el9.x86_64
 DEBUG util.py:537:  cpio-2.13-16.el9.x86_64
@@ -664,7 +676,7 @@ DEBUG util.py:537:  diffutils-3.7-12.el9.x86_64
 DEBUG util.py:537:  gdbm-libs-1.23-1.el9.x86_64
 DEBUG util.py:537:  json-c-0.14-11.el9.x86_64
 DEBUG util.py:537:  keyutils-libs-1.6.3-1.el9.x86_64
-DEBUG util.py:537:  libbrotli-1.0.9-9.el9_7.x86_64
+DEBUG util.py:537:  libbrotli-1.0.9-10.el9_8.x86_64
 DEBUG util.py:537:  libdb-5.3.28-57.el9_6.x86_64
 DEBUG util.py:537:  libeconf-0.4.1-7.el9_8.x86_64
 DEBUG util.py:537:  libgomp-11.5.0-14.el9.alma.1.x86_64
@@ -680,12 +692,11 @@ DEBUG util.py:537:  ncurses-6.2-12.20210508.el9.x86_64
 DEBUG util.py:537:  pcre-8.44-4.el9.x86_64
 DEBUG util.py:537:  grep-3.6-5.el9.x86_64
 DEBUG util.py:537:  xz-5.2.5-8.el9_0.x86_64
-DEBUG util.py:537:  pcre2-10.40-6.el9.x86_64
 DEBUG util.py:537:  libselinux-3.6-3.el9.x86_64
 DEBUG util.py:537:  sed-4.8-10.el9.x86_64
 DEBUG util.py:537:  findutils-4.8.0-7.el9.x86_64
-DEBUG util.py:537:  openssl-fips-provider-3.5.8-1.el9_8.x86_64
-DEBUG util.py:537:  openssl-libs-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-fips-provider-3.5.8-2.el9_8.x86_64
+DEBUG util.py:537:  openssl-libs-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  coreutils-8.32-41.el9_8.1.x86_64
 DEBUG util.py:537:  ca-certificates-2025.2.80_v9.0.305-91.el9.noarch
 DEBUG util.py:537:  libblkid-2.37.4-25.el9.x86_64
@@ -757,7 +768,7 @@ DEBUG util.py:537:  perl-Encode-3.08-462.el9.x86_64
 DEBUG util.py:537:  perl-libs-5.32.1-484.el9_8.x86_64
 DEBUG util.py:537:  perl-interpreter-5.32.1-484.el9_8.x86_64
 DEBUG util.py:537:  kernel-srpm-macros-1.0-14.el9.noarch
-DEBUG util.py:537:  openssl-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  libpwquality-1.4.4-8.el9.x86_64
 DEBUG util.py:537:  pam-1.5.1-28.el9_8.1.x86_64
 DEBUG util.py:537:  libevent-2.1.13-1.el9_8.x86_64
@@ -778,7 +789,7 @@ DEBUG util.py:537:  elfutils-debuginfod-client-0.194-1.el9.alma.1.x86_64
 DEBUG util.py:537:  binutils-gold-2.35.2-72.el9.x86_64
 DEBUG util.py:537:  binutils-2.35.2-72.el9.x86_64
 DEBUG util.py:537:  elfutils-0.194-1.el9.alma.1.x86_64
-DEBUG util.py:537:  gdb-minimal-16.3-3.el9.x86_64
+DEBUG util.py:537:  gdb-minimal-16.3-3.1.el9_8.x86_64
 DEBUG util.py:537:  debugedit-5.0-11.el9.x86_64
 DEBUG util.py:537:  rpm-build-libs-4.16.1.3-40.el9.x86_64
 DEBUG util.py:537:  fonts-srpm-macros-2.0.5-7.el9.1.noarch
@@ -793,9 +804,10 @@ DEBUG util.py:537:  R-srpm-macros-1.3.7-2.el9.noarch
 DEBUG util.py:537:  epel-rpm-macros-9-18.el9.noarch
 DEBUG util.py:537:  util-linux-2.37.4-25.el9.x86_64
 DEBUG util.py:537:  which-2.21-30.el9_6.x86_64
-DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.7.x86_64
-DEBUG util.py:537:  curl-7.76.1-40.el9_8.7.x86_64
-DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64
+DEBUG util.py:537:  pcre2-syntax-10.40-7.el9_8.noarch
+DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.8.x86_64
+DEBUG util.py:537:  curl-7.76.1-40.el9_8.8.x86_64
+DEBUG util.py:537:  pcre2-10.40-7.el9_8.x86_64
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:200:  kill orphans in chroot /var/lib/mock/alma+epel-9-x86_64/root
 DEBUG util.py:200:  kill orphans in chroot /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/var/lib/mock/alma+epel-9-x86_64/root
@@ -846,16 +858,16 @@ DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/root
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '1a4b63cfce8140d098c77ce43ff22402', '-D', '/var/lib/mock/alma+epel-9-x86_64/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/nginx-1.30.5-1.alma9.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '9f3ed0e9a1394fc7bf091db879bade54', '-D', '/var/lib/mock/alma+epel-9-x86_64/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/nginx-1.30.6-1.alma9.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:537:  Updating / installing...
-DEBUG util.py:537:  nginx-2:1.30.5-1.alma9                ########################################
+DEBUG util.py:537:  nginx-2:1.30.6-1.alma9                ########################################
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '2905a3c5d2fd45baaccb1fc9fb335697', '-D', '/var/lib/mock/alma+epel-9-x86_64/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qpl', '/builddir/build/originals/nginx-1.30.5-1.alma9.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '35e83dbcf1c34526a6569497de686ab5', '-D', '/var/lib/mock/alma+epel-9-x86_64/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qpl', '/builddir/build/originals/nginx-1.30.6-1.alma9.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:537:  0.1.1.tar.gz
 DEBUG util.py:537:  logrotate
-DEBUG util.py:537:  nginx-1.30.5.tar.gz
+DEBUG util.py:537:  nginx-1.30.6.tar.gz
 DEBUG util.py:537:  nginx-debug.service
 DEBUG util.py:537:  nginx.check-reload.sh
 DEBUG util.py:537:  nginx.conf
@@ -881,7 +893,7 @@ DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'remount,priva
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'e048ffa7349e42ed9feb74c617edfd6c', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qa', '--root', '/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '9c60ceca62904a9982788450cde0f8c4', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qa', '--root', '/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:537:  gpg-pubkey-b86b3716-61e69f29
 DEBUG util.py:537:  gpg-pubkey-3228467c-613798eb
 DEBUG util.py:537:  rust-srpm-macros-17-4.el9.noarch
@@ -895,10 +907,9 @@ DEBUG util.py:537:  perl-srpm-macros-1-41.el9.noarch
 DEBUG util.py:537:  openblas-srpm-macros-2-11.el9.noarch
 DEBUG util.py:537:  ocaml-srpm-macros-6-6.el9.noarch
 DEBUG util.py:537:  ghc-srpm-macros-1.5.0-6.el9.noarch
-DEBUG util.py:537:  tzdata-2026c-1.el9_8.noarch
+DEBUG util.py:537:  tzdata-2026e-1.el9_8.noarch
 DEBUG util.py:537:  publicsuffix-list-dafsa-20210518-3.el9.noarch
 DEBUG util.py:537:  pkgconf-m4-1.7.3-10.el9.noarch
-DEBUG util.py:537:  pcre2-syntax-10.40-6.el9.noarch
 DEBUG util.py:537:  ncurses-base-6.2-12.20210508.el9.noarch
 DEBUG util.py:537:  libssh-config-0.10.4-19.el9_8.noarch
 DEBUG util.py:537:  coreutils-common-8.32-41.el9_8.1.x86_64
@@ -910,11 +921,11 @@ DEBUG util.py:537:  filesystem-3.16-5.el9.x86_64
 DEBUG util.py:537:  basesystem-11-13.el9.noarch
 DEBUG util.py:537:  ncurses-libs-6.2-12.20210508.el9.x86_64
 DEBUG util.py:537:  bash-5.1.8-9.el9.x86_64
-DEBUG util.py:537:  glibc-gconv-extra-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-gconv-extra-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  libgcc-11.5.0-14.el9.alma.1.x86_64
-DEBUG util.py:537:  glibc-minimal-langpack-2.34-275.el9_8.x86_64
-DEBUG util.py:537:  glibc-common-2.34-275.el9_8.x86_64
-DEBUG util.py:537:  glibc-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-minimal-langpack-2.34-283.el9_8.x86_64
+DEBUG util.py:537:  glibc-common-2.34-283.el9_8.x86_64
+DEBUG util.py:537:  glibc-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  zlib-1.2.11-40.el9.x86_64
 DEBUG util.py:537:  xz-libs-5.2.5-8.el9_0.x86_64
 DEBUG util.py:537:  bzip2-libs-1.0.8-11.el9.x86_64
@@ -944,7 +955,7 @@ DEBUG util.py:537:  audit-libs-3.1.5-8.el9.x86_64
 DEBUG util.py:537:  libffi-3.4.2-8.el9.x86_64
 DEBUG util.py:537:  libsepol-3.6-3.el9.x86_64
 DEBUG util.py:537:  libsigsegv-2.13-4.el9.x86_64
-DEBUG util.py:537:  gawk-5.1.0-6.el9.x86_64
+DEBUG util.py:537:  gawk-5.1.0-6.el9_8.1.x86_64
 DEBUG util.py:537:  libsmartcols-2.37.4-25.el9.x86_64
 DEBUG util.py:537:  libtasn1-4.16.0-10.el9_8.x86_64
 DEBUG util.py:537:  p11-kit-0.26.4-1.el9_8.x86_64
@@ -957,6 +968,7 @@ DEBUG util.py:537:  zip-3.0-35.el9.x86_64
 DEBUG util.py:537:  zstd-1.5.5-1.el9.x86_64
 DEBUG util.py:537:  groff-base-1.22.4-10.el9.x86_64
 DEBUG util.py:537:  bzip2-1.0.8-11.el9.x86_64
+DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64
 DEBUG util.py:537:  info-6.7-15.el9.x86_64
 DEBUG util.py:537:  ed-1.14.2-12.el9.x86_64
 DEBUG util.py:537:  cpio-2.13-16.el9.x86_64
@@ -964,7 +976,7 @@ DEBUG util.py:537:  diffutils-3.7-12.el9.x86_64
 DEBUG util.py:537:  gdbm-libs-1.23-1.el9.x86_64
 DEBUG util.py:537:  json-c-0.14-11.el9.x86_64
 DEBUG util.py:537:  keyutils-libs-1.6.3-1.el9.x86_64
-DEBUG util.py:537:  libbrotli-1.0.9-9.el9_7.x86_64
+DEBUG util.py:537:  libbrotli-1.0.9-10.el9_8.x86_64
 DEBUG util.py:537:  libdb-5.3.28-57.el9_6.x86_64
 DEBUG util.py:537:  libeconf-0.4.1-7.el9_8.x86_64
 DEBUG util.py:537:  libgomp-11.5.0-14.el9.alma.1.x86_64
@@ -980,12 +992,11 @@ DEBUG util.py:537:  ncurses-6.2-12.20210508.el9.x86_64
 DEBUG util.py:537:  pcre-8.44-4.el9.x86_64
 DEBUG util.py:537:  grep-3.6-5.el9.x86_64
 DEBUG util.py:537:  xz-5.2.5-8.el9_0.x86_64
-DEBUG util.py:537:  pcre2-10.40-6.el9.x86_64
 DEBUG util.py:537:  libselinux-3.6-3.el9.x86_64
 DEBUG util.py:537:  sed-4.8-10.el9.x86_64
 DEBUG util.py:537:  findutils-4.8.0-7.el9.x86_64
-DEBUG util.py:537:  openssl-fips-provider-3.5.8-1.el9_8.x86_64
-DEBUG util.py:537:  openssl-libs-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-fips-provider-3.5.8-2.el9_8.x86_64
+DEBUG util.py:537:  openssl-libs-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  coreutils-8.32-41.el9_8.1.x86_64
 DEBUG util.py:537:  ca-certificates-2025.2.80_v9.0.305-91.el9.noarch
 DEBUG util.py:537:  libblkid-2.37.4-25.el9.x86_64
@@ -1057,7 +1068,7 @@ DEBUG util.py:537:  perl-Encode-3.08-462.el9.x86_64
 DEBUG util.py:537:  perl-libs-5.32.1-484.el9_8.x86_64
 DEBUG util.py:537:  perl-interpreter-5.32.1-484.el9_8.x86_64
 DEBUG util.py:537:  kernel-srpm-macros-1.0-14.el9.noarch
-DEBUG util.py:537:  openssl-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  libpwquality-1.4.4-8.el9.x86_64
 DEBUG util.py:537:  pam-1.5.1-28.el9_8.1.x86_64
 DEBUG util.py:537:  libevent-2.1.13-1.el9_8.x86_64
@@ -1078,7 +1089,7 @@ DEBUG util.py:537:  elfutils-debuginfod-client-0.194-1.el9.alma.1.x86_64
 DEBUG util.py:537:  binutils-gold-2.35.2-72.el9.x86_64
 DEBUG util.py:537:  binutils-2.35.2-72.el9.x86_64
 DEBUG util.py:537:  elfutils-0.194-1.el9.alma.1.x86_64
-DEBUG util.py:537:  gdb-minimal-16.3-3.el9.x86_64
+DEBUG util.py:537:  gdb-minimal-16.3-3.1.el9_8.x86_64
 DEBUG util.py:537:  debugedit-5.0-11.el9.x86_64
 DEBUG util.py:537:  rpm-build-libs-4.16.1.3-40.el9.x86_64
 DEBUG util.py:537:  fonts-srpm-macros-2.0.5-7.el9.1.noarch
@@ -1093,9 +1104,10 @@ DEBUG util.py:537:  R-srpm-macros-1.3.7-2.el9.noarch
 DEBUG util.py:537:  epel-rpm-macros-9-18.el9.noarch
 DEBUG util.py:537:  util-linux-2.37.4-25.el9.x86_64
 DEBUG util.py:537:  which-2.21-30.el9_6.x86_64
-DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.7.x86_64
-DEBUG util.py:537:  curl-7.76.1-40.el9_8.7.x86_64
-DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64
+DEBUG util.py:537:  pcre2-syntax-10.40-7.el9_8.noarch
+DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.8.x86_64
+DEBUG util.py:537:  curl-7.76.1-40.el9_8.8.x86_64
+DEBUG util.py:537:  pcre2-10.40-7.el9_8.x86_64
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:200:  kill orphans in chroot /var/lib/mock/alma+epel-9-x86_64/root
 DEBUG util.py:200:  kill orphans in chroot /var/lib/mock/alma+epel-9-x86_64-bootstrap/root/var/lib/mock/alma+epel-9-x86_64/root
@@ -1107,7 +1119,7 @@ DEBUG util.py:636:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/moc
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'dfa7c36a31444f26abcb592e2acccb0b', '-D', '/var/lib/mock/alma+epel-9-x86_64/root', '-a', '--capability=cap_ipc_lock', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/sh', '-c', 'rpmbuild --help'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '4095987c1e7c49059be843556d5f6ec8', '-D', '/var/lib/mock/alma+epel-9-x86_64/root', '-a', '--capability=cap_ipc_lock', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/sh', '-c', 'rpmbuild --help'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:537:  Usage: rpmbuild [OPTION...]
 DEBUG util.py:537:  Build options with [ <specfile> | <tarball> | <source package> ]:
 DEBUG util.py:537:        -bp                        build through %prep (unpack sources and apply
@@ -1230,7 +1242,7 @@ DEBUG util.py:717:  child environment: None
 DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/alma+epel-9-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
-DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.ow0x98l1', '/var/lib/mock/alma+epel-9-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.7ydvuxb0', '/var/lib/mock/alma+epel-9-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:688:  Child return code was: 0
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64/root/sys/fs/selinux
 DEBUG util.py:717:  child environment: None
@@ -1248,16 +1260,16 @@ DEBUG util.py:717:  child environment: None
 DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:688:  Child return code was: 0
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64/root/installation-homedir
-DEBUG package_manager.py:296:  ['/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/mock/alma+epel-9-x86_64/root/', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/alma+epel-9-x86_64/root//builddir/build/SRPMS/nginx-1.30.5-1.alma9.src.rpm']
+DEBUG package_manager.py:296:  ['/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/mock/alma+epel-9-x86_64/root/', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/alma+epel-9-x86_64/root//builddir/build/SRPMS/nginx-1.30.6-1.alma9.src.rpm']
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '9b425f43b9974130b0df665b59a05c8d', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/var/lib/mock/alma+epel-9-x86_64/root/installation-homedir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--setenv=LC_MESSAGES=C.UTF-8', '/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/mock/alma+epel-9-x86_64/root/', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/alma+epel-9-x86_64/root//builddir/build/SRPMS/nginx-1.30.5-1.alma9.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/alma+epel-9-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '4fdf5f6550964fcab67f59d2f2e9c425', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/var/lib/mock/alma+epel-9-x86_64/root/installation-homedir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--setenv=LC_MESSAGES=C.UTF-8', '/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/mock/alma+epel-9-x86_64/root/', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/alma+epel-9-x86_64/root//builddir/build/SRPMS/nginx-1.30.6-1.alma9.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/alma+epel-9-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:535:  No matches found for the following disable plugin patterns: local, spacewalk, versionlock
-DEBUG util.py:537:  AlmaLinux 9 - BaseOS                                                                                                                                         1.0 kB/s | 3.8 kB     00:03    
-DEBUG util.py:537:  AlmaLinux 9 - AppStream                                                                                                                                      2.8 kB/s | 4.2 kB     00:01    
-DEBUG util.py:537:  AlmaLinux 9 - CRB                                                                                                                                            3.5 kB/s | 4.2 kB     00:01    
-DEBUG util.py:537:  AlmaLinux 9 - Extras                                                                                                                                         321  B/s | 3.3 kB     00:10    
-DEBUG util.py:537:  Extra Packages for Enterprise Linux 9 - x86_64                                                                                                                10 kB/s | 7.4 kB     00:00    
+DEBUG util.py:537:  AlmaLinux 9 - BaseOS                                                                                                                                         4.7 kB/s | 3.8 kB     00:00    
+DEBUG util.py:537:  AlmaLinux 9 - AppStream                                                                                                                                      5.0 kB/s | 4.2 kB     00:00    
+DEBUG util.py:537:  AlmaLinux 9 - CRB                                                                                                                                            5.1 kB/s | 4.2 kB     00:00    
+DEBUG util.py:537:  AlmaLinux 9 - Extras                                                                                                                                         3.9 kB/s | 3.3 kB     00:00    
+DEBUG util.py:537:  Extra Packages for Enterprise Linux 9 - x86_64                                                                                                                11 kB/s |  10 kB     00:00    
 DEBUG util.py:537:  mock-localrepo                                                                                                                                               2.9 MB/s | 3.0 kB     00:00    
 DEBUG util.py:537:  Package pkgconf-pkg-config-1.7.3-10.el9.x86_64 is already installed.
 DEBUG util.py:537:  Dependencies resolved.
@@ -1267,8 +1279,8 @@ DEBUG util.py:537:  ============================================================
 DEBUG util.py:537:  Installing:
 DEBUG util.py:537:   libzstd-devel                                           x86_64                            1.5.5-1.el9                                       appstream                                  50 k
 DEBUG util.py:537:   modsecurity                                             x86_64                            3.0.16-1.el9                                      mock-localrepo                            582 k
-DEBUG util.py:537:   openssl-devel                                           x86_64                            1:3.5.8-1.el9_8                                   appstream                                 3.5 M
-DEBUG util.py:537:   pcre2-devel                                             x86_64                            10.40-6.el9                                       appstream                                 471 k
+DEBUG util.py:537:   openssl-devel                                           x86_64                            1:3.5.8-2.el9_8                                   appstream                                 3.5 M
+DEBUG util.py:537:   pcre2-devel                                             x86_64                            10.40-7.el9_8                                     appstream                                 471 k
 DEBUG util.py:537:   perl                                                    x86_64                            4:5.32.1-484.el9_8                                appstream                                  11 k
 DEBUG util.py:537:   systemd                                                 x86_64                            252-67.el9_8.6.alma.1                             baseos                                    4.0 M
 DEBUG util.py:537:   zlib-devel                                              x86_64                            1.2.11-40.el9                                     appstream                                  44 k
@@ -1283,11 +1295,11 @@ DEBUG util.py:537:   expat                                                   x86
 DEBUG util.py:537:   gcc                                                     x86_64                            11.5.0-14.el9.alma.1                              appstream                                  32 M
 DEBUG util.py:537:   gcc-c++                                                 x86_64                            11.5.0-14.el9.alma.1                              appstream                                  13 M
 DEBUG util.py:537:   gcc-plugin-annobin                                      x86_64                            11.5.0-14.el9.alma.1                              appstream                                  36 k
-DEBUG util.py:537:   glibc-devel                                             x86_64                            2.34-275.el9_8                                    appstream                                  36 k
-DEBUG util.py:537:   glibc-headers                                           x86_64                            2.34-275.el9_8                                    appstream                                 443 k
+DEBUG util.py:537:   glibc-devel                                             x86_64                            2.34-283.el9_8                                    appstream                                  37 k
+DEBUG util.py:537:   glibc-headers                                           x86_64                            2.34-283.el9_8                                    appstream                                 443 k
 DEBUG util.py:537:   gnupg2                                                  x86_64                            2.3.3-5.el9_7                                     baseos                                    2.5 M
-DEBUG util.py:537:   gnutls                                                  x86_64                            3.8.10-8.el9_8                                    baseos                                    1.4 M
-DEBUG util.py:537:   kernel-headers                                          x86_64                            5.14.0-687.52.1.el9_8                             appstream                                 2.6 M
+DEBUG util.py:537:   gnutls                                                  x86_64                            3.8.10-9.el9_8                                    baseos                                    1.4 M
+DEBUG util.py:537:   kernel-headers                                          x86_64                            5.14.0-687.56.1.el9_8                             appstream                                 2.6 M
 DEBUG util.py:537:   kmod-libs                                               x86_64                            28-11.el9                                         baseos                                     62 k
 DEBUG util.py:537:   libassuan                                               x86_64                            2.5.5-3.el9                                       baseos                                     67 k
 DEBUG util.py:537:   libedit                                                 x86_64                            3.1-39.20210216cvs.el9                            baseos                                    103 k
@@ -1302,8 +1314,8 @@ DEBUG util.py:537:   lmdb-libs                                               x86
 DEBUG util.py:537:   make                                                    x86_64                            1:4.3-8.el9                                       baseos                                    530 k
 DEBUG util.py:537:   nettle                                                  x86_64                            3.10.1-1.el9                                      baseos                                    562 k
 DEBUG util.py:537:   npth                                                    x86_64                            1.6-8.el9                                         baseos                                     24 k
-DEBUG util.py:537:   pcre2-utf16                                             x86_64                            10.40-6.el9                                       appstream                                 213 k
-DEBUG util.py:537:   pcre2-utf32                                             x86_64                            10.40-6.el9                                       appstream                                 202 k
+DEBUG util.py:537:   pcre2-utf16                                             x86_64                            10.40-7.el9_8                                     appstream                                 213 k
+DEBUG util.py:537:   pcre2-utf32                                             x86_64                            10.40-7.el9_8                                     appstream                                 202 k
 DEBUG util.py:537:   perl-Algorithm-Diff                                     noarch                            1.2010-4.el9                                      appstream                                  47 k
 DEBUG util.py:537:   perl-Archive-Tar                                        noarch                            2.38-6.el9_8.2                                    appstream                                  71 k
 DEBUG util.py:537:   perl-Archive-Zip                                        noarch                            1.68-6.el9                                        appstream                                 106 k
@@ -1489,7 +1501,7 @@ DEBUG util.py:537:  [SKIPPED] dbus-broker-28-9.el9_8.x86_64.rpm: Already downloa
 DEBUG util.py:537:  [SKIPPED] dbus-common-1.12.20-8.el9.noarch.rpm: Already downloaded                                                                                                                          
 DEBUG util.py:537:  [SKIPPED] expat-2.5.0-6.el9_8.5.x86_64.rpm: Already downloaded                                                                                                                              
 DEBUG util.py:537:  [SKIPPED] gnupg2-2.3.3-5.el9_7.x86_64.rpm: Already downloaded                                                                                                                               
-DEBUG util.py:537:  [SKIPPED] gnutls-3.8.10-8.el9_8.x86_64.rpm: Already downloaded                                                                                                                              
+DEBUG util.py:537:  [SKIPPED] gnutls-3.8.10-9.el9_8.x86_64.rpm: Already downloaded                                                                                                                              
 DEBUG util.py:537:  [SKIPPED] kmod-libs-28-11.el9.x86_64.rpm: Already downloaded                                                                                                                                
 DEBUG util.py:537:  [SKIPPED] libassuan-2.5.5-3.el9.x86_64.rpm: Already downloaded                                                                                                                              
 DEBUG util.py:537:  [SKIPPED] libedit-3.1-39.20210216cvs.el9.x86_64.rpm: Already downloaded                                                                                                                     
@@ -1512,19 +1524,19 @@ DEBUG util.py:537:  [SKIPPED] cpp-11.5.0-14.el9.alma.1.x86_64.rpm: Already downl
 DEBUG util.py:537:  [SKIPPED] gcc-11.5.0-14.el9.alma.1.x86_64.rpm: Already downloaded                                                                                                                           
 DEBUG util.py:537:  [SKIPPED] gcc-c++-11.5.0-14.el9.alma.1.x86_64.rpm: Already downloaded                                                                                                                       
 DEBUG util.py:537:  [SKIPPED] gcc-plugin-annobin-11.5.0-14.el9.alma.1.x86_64.rpm: Already downloaded                                                                                                            
-DEBUG util.py:537:  [SKIPPED] glibc-devel-2.34-275.el9_8.x86_64.rpm: Already downloaded                                                                                                                         
-DEBUG util.py:537:  [SKIPPED] glibc-headers-2.34-275.el9_8.x86_64.rpm: Already downloaded                                                                                                                       
-DEBUG util.py:537:  [SKIPPED] kernel-headers-5.14.0-687.52.1.el9_8.x86_64.rpm: Already downloaded                                                                                                               
+DEBUG util.py:537:  [SKIPPED] glibc-devel-2.34-283.el9_8.x86_64.rpm: Already downloaded                                                                                                                         
+DEBUG util.py:537:  [SKIPPED] glibc-headers-2.34-283.el9_8.x86_64.rpm: Already downloaded                                                                                                                       
+DEBUG util.py:537:  [SKIPPED] kernel-headers-5.14.0-687.56.1.el9_8.x86_64.rpm: Already downloaded                                                                                                               
 DEBUG util.py:537:  [SKIPPED] libmpc-1.2.1-4.el9.x86_64.rpm: Already downloaded                                                                                                                                 
 DEBUG util.py:537:  [SKIPPED] libstdc++-devel-11.5.0-14.el9.alma.1.x86_64.rpm: Already downloaded                                                                                                               
 DEBUG util.py:537:  [SKIPPED] libxcrypt-devel-4.4.18-3.el9.x86_64.rpm: Already downloaded                                                                                                                       
 DEBUG util.py:537:  [SKIPPED] libzstd-devel-1.5.5-1.el9.x86_64.rpm: Already downloaded                                                                                                                          
 DEBUG util.py:537:  [SKIPPED] llvm-filesystem-21.1.8-2.el9.x86_64.rpm: Already downloaded                                                                                                                       
 DEBUG util.py:537:  [SKIPPED] llvm-libs-21.1.8-2.el9.x86_64.rpm: Already downloaded                                                                                                                             
-DEBUG util.py:537:  [SKIPPED] openssl-devel-3.5.8-1.el9_8.x86_64.rpm: Already downloaded                                                                                                                        
-DEBUG util.py:537:  [SKIPPED] pcre2-devel-10.40-6.el9.x86_64.rpm: Already downloaded                                                                                                                            
-DEBUG util.py:537:  [SKIPPED] pcre2-utf16-10.40-6.el9.x86_64.rpm: Already downloaded                                                                                                                            
-DEBUG util.py:537:  [SKIPPED] pcre2-utf32-10.40-6.el9.x86_64.rpm: Already downloaded                                                                                                                            
+DEBUG util.py:537:  [SKIPPED] openssl-devel-3.5.8-2.el9_8.x86_64.rpm: Already downloaded                                                                                                                        
+DEBUG util.py:537:  [SKIPPED] pcre2-devel-10.40-7.el9_8.x86_64.rpm: Already downloaded                                                                                                                          
+DEBUG util.py:537:  [SKIPPED] pcre2-utf16-10.40-7.el9_8.x86_64.rpm: Already downloaded                                                                                                                          
+DEBUG util.py:537:  [SKIPPED] pcre2-utf32-10.40-7.el9_8.x86_64.rpm: Already downloaded                                                                                                                          
 DEBUG util.py:537:  [SKIPPED] perl-5.32.1-484.el9_8.x86_64.rpm: Already downloaded                                                                                                                              
 DEBUG util.py:537:  [SKIPPED] perl-Algorithm-Diff-1.2010-4.el9.noarch.rpm: Already downloaded                                                                                                                   
 DEBUG util.py:537:  [SKIPPED] perl-Archive-Tar-2.38-6.el9_8.2.noarch.rpm: Already downloaded                                                                                                                    
@@ -1851,14 +1863,14 @@ DEBUG util.py:537:    Installing       : perl-Attribute-Handlers-1.01-484.el9_8.
 DEBUG util.py:537:    Installing       : perl-Algorithm-Diff-1.2010-4.el9.noarch                                                                                                                         150/211 
 DEBUG util.py:537:    Installing       : perl-Text-Diff-1.45-13.el9.noarch                                                                                                                               151/211 
 DEBUG util.py:537:    Installing       : perl-Archive-Tar-2.38-6.el9_8.2.noarch                                                                                                                          152/211 
-DEBUG util.py:537:    Installing       : pcre2-utf32-10.40-6.el9.x86_64                                                                                                                                  153/211 
-DEBUG util.py:537:    Installing       : pcre2-utf16-10.40-6.el9.x86_64                                                                                                                                  154/211 
+DEBUG util.py:537:    Installing       : pcre2-utf32-10.40-7.el9_8.x86_64                                                                                                                                153/211 
+DEBUG util.py:537:    Installing       : pcre2-utf16-10.40-7.el9_8.x86_64                                                                                                                                154/211 
 DEBUG util.py:537:    Installing       : llvm-filesystem-21.1.8-2.el9.x86_64                                                                                                                             155/211 
 DEBUG util.py:537:    Installing       : libstdc++-devel-11.5.0-14.el9.alma.1.x86_64                                                                                                                     156/211 
-DEBUG util.py:537:    Installing       : kernel-headers-5.14.0-687.52.1.el9_8.x86_64                                                                                                                     157/211 
-DEBUG util.py:537:    Installing       : glibc-headers-2.34-275.el9_8.x86_64                                                                                                                             158/211 
+DEBUG util.py:537:    Installing       : kernel-headers-5.14.0-687.56.1.el9_8.x86_64                                                                                                                     157/211 
+DEBUG util.py:537:    Installing       : glibc-headers-2.34-283.el9_8.x86_64                                                                                                                             158/211 
 DEBUG util.py:537:    Installing       : libxcrypt-devel-4.4.18-3.el9.x86_64                                                                                                                             159/211 
-DEBUG util.py:537:    Installing       : glibc-devel-2.34-275.el9_8.x86_64                                                                                                                               160/211 
+DEBUG util.py:537:    Installing       : glibc-devel-2.34-283.el9_8.x86_64                                                                                                                               160/211 
 DEBUG util.py:537:    Installing       : gcc-11.5.0-14.el9.alma.1.x86_64                                                                                                                                 161/211 
 DEBUG util.py:537:    Running scriptlet: gcc-11.5.0-14.el9.alma.1.x86_64                                                                                                                                 161/211 
 DEBUG util.py:537:    Installing       : perl-Filter-2:1.60-4.el9.x86_64                                                                                                                                 162/211 
@@ -1886,7 +1898,7 @@ DEBUG util.py:537:    Installing       : perl-inc-latest-2:0.500-20.el9.noarch  
 DEBUG util.py:537:    Installing       : perl-Module-Build-2:0.42.31-9.el9.noarch                                                                                                                        184/211 
 DEBUG util.py:537:    Installing       : npth-1.6-8.el9.x86_64                                                                                                                                           185/211 
 DEBUG util.py:537:    Installing       : nettle-3.10.1-1.el9.x86_64                                                                                                                                      186/211 
-DEBUG util.py:537:    Installing       : gnutls-3.8.10-8.el9_8.x86_64                                                                                                                                    187/211 
+DEBUG util.py:537:    Installing       : gnutls-3.8.10-9.el9_8.x86_64                                                                                                                                    187/211 
 DEBUG util.py:537:    Installing       : lmdb-libs-0.9.29-3.el9.x86_64                                                                                                                                   188/211 
 DEBUG util.py:537:    Installing       : libseccomp-2.5.2-2.el9.x86_64                                                                                                                                   189/211 
 DEBUG util.py:537:    Installing       : libksba-1.5.1-7.el9.x86_64                                                                                                                                      190/211 
@@ -1918,9 +1930,9 @@ DEBUG util.py:537:    Installing       : modsecurity-3.0.16-1.el9.x86_64        
 DEBUG util.py:537:    Running scriptlet: modsecurity-3.0.16-1.el9.x86_64                                                                                                                                 206/211 
 DEBUG util.py:537:    Installing       : gcc-plugin-annobin-11.5.0-14.el9.alma.1.x86_64                                                                                                                  207/211 
 DEBUG util.py:537:    Running scriptlet: gcc-plugin-annobin-11.5.0-14.el9.alma.1.x86_64                                                                                                                  207/211 
-DEBUG util.py:537:    Installing       : pcre2-devel-10.40-6.el9.x86_64                                                                                                                                  208/211 
+DEBUG util.py:537:    Installing       : pcre2-devel-10.40-7.el9_8.x86_64                                                                                                                                208/211 
 DEBUG util.py:537:    Installing       : zlib-devel-1.2.11-40.el9.x86_64                                                                                                                                 209/211 
-DEBUG util.py:537:    Installing       : openssl-devel-1:3.5.8-1.el9_8.x86_64                                                                                                                            210/211 
+DEBUG util.py:537:    Installing       : openssl-devel-1:3.5.8-2.el9_8.x86_64                                                                                                                            210/211 
 DEBUG util.py:537:    Installing       : libzstd-devel-1.5.5-1.el9.x86_64                                                                                                                                211/211 
 DEBUG util.py:537:    Running scriptlet: libzstd-devel-1.5.5-1.el9.x86_64                                                                                                                                211/211 
 DEBUG util.py:537:    Verifying        : acl-2.4.0-1.el9_8.x86_64                                                                                                                                          1/211 
@@ -1929,7 +1941,7 @@ DEBUG util.py:537:    Verifying        : dbus-broker-28-9.el9_8.x86_64          
 DEBUG util.py:537:    Verifying        : dbus-common-1:1.12.20-8.el9.noarch                                                                                                                                4/211 
 DEBUG util.py:537:    Verifying        : expat-2.5.0-6.el9_8.5.x86_64                                                                                                                                      5/211 
 DEBUG util.py:537:    Verifying        : gnupg2-2.3.3-5.el9_7.x86_64                                                                                                                                       6/211 
-DEBUG util.py:537:    Verifying        : gnutls-3.8.10-8.el9_8.x86_64                                                                                                                                      7/211 
+DEBUG util.py:537:    Verifying        : gnutls-3.8.10-9.el9_8.x86_64                                                                                                                                      7/211 
 DEBUG util.py:537:    Verifying        : kmod-libs-28-11.el9.x86_64                                                                                                                                        8/211 
 DEBUG util.py:537:    Verifying        : libassuan-2.5.5-3.el9.x86_64                                                                                                                                      9/211 
 DEBUG util.py:537:    Verifying        : libedit-3.1-39.20210216cvs.el9.x86_64                                                                                                                            10/211 
@@ -1952,19 +1964,19 @@ DEBUG util.py:537:    Verifying        : cpp-11.5.0-14.el9.alma.1.x86_64        
 DEBUG util.py:537:    Verifying        : gcc-11.5.0-14.el9.alma.1.x86_64                                                                                                                                  27/211 
 DEBUG util.py:537:    Verifying        : gcc-c++-11.5.0-14.el9.alma.1.x86_64                                                                                                                              28/211 
 DEBUG util.py:537:    Verifying        : gcc-plugin-annobin-11.5.0-14.el9.alma.1.x86_64                                                                                                                   29/211 
-DEBUG util.py:537:    Verifying        : glibc-devel-2.34-275.el9_8.x86_64                                                                                                                                30/211 
-DEBUG util.py:537:    Verifying        : glibc-headers-2.34-275.el9_8.x86_64                                                                                                                              31/211 
-DEBUG util.py:537:    Verifying        : kernel-headers-5.14.0-687.52.1.el9_8.x86_64                                                                                                                      32/211 
+DEBUG util.py:537:    Verifying        : glibc-devel-2.34-283.el9_8.x86_64                                                                                                                                30/211 
+DEBUG util.py:537:    Verifying        : glibc-headers-2.34-283.el9_8.x86_64                                                                                                                              31/211 
+DEBUG util.py:537:    Verifying        : kernel-headers-5.14.0-687.56.1.el9_8.x86_64                                                                                                                      32/211 
 DEBUG util.py:537:    Verifying        : libmpc-1.2.1-4.el9.x86_64                                                                                                                                        33/211 
 DEBUG util.py:537:    Verifying        : libstdc++-devel-11.5.0-14.el9.alma.1.x86_64                                                                                                                      34/211 
 DEBUG util.py:537:    Verifying        : libxcrypt-devel-4.4.18-3.el9.x86_64                                                                                                                              35/211 
 DEBUG util.py:537:    Verifying        : libzstd-devel-1.5.5-1.el9.x86_64                                                                                                                                 36/211 
 DEBUG util.py:537:    Verifying        : llvm-filesystem-21.1.8-2.el9.x86_64                                                                                                                              37/211 
 DEBUG util.py:537:    Verifying        : llvm-libs-21.1.8-2.el9.x86_64                                                                                                                                    38/211 
-DEBUG util.py:537:    Verifying        : openssl-devel-1:3.5.8-1.el9_8.x86_64                                                                                                                             39/211 
-DEBUG util.py:537:    Verifying        : pcre2-devel-10.40-6.el9.x86_64                                                                                                                                   40/211 
-DEBUG util.py:537:    Verifying        : pcre2-utf16-10.40-6.el9.x86_64                                                                                                                                   41/211 
-DEBUG util.py:537:    Verifying        : pcre2-utf32-10.40-6.el9.x86_64                                                                                                                                   42/211 
+DEBUG util.py:537:    Verifying        : openssl-devel-1:3.5.8-2.el9_8.x86_64                                                                                                                             39/211 
+DEBUG util.py:537:    Verifying        : pcre2-devel-10.40-7.el9_8.x86_64                                                                                                                                 40/211 
+DEBUG util.py:537:    Verifying        : pcre2-utf16-10.40-7.el9_8.x86_64                                                                                                                                 41/211 
+DEBUG util.py:537:    Verifying        : pcre2-utf32-10.40-7.el9_8.x86_64                                                                                                                                 42/211 
 DEBUG util.py:537:    Verifying        : perl-4:5.32.1-484.el9_8.x86_64                                                                                                                                   43/211 
 DEBUG util.py:537:    Verifying        : perl-Algorithm-Diff-1.2010-4.el9.noarch                                                                                                                          44/211 
 DEBUG util.py:537:    Verifying        : perl-Archive-Tar-2.38-6.el9_8.2.noarch                                                                                                                           45/211 
@@ -2138,15 +2150,15 @@ DEBUG util.py:537:  Installed:
 DEBUG util.py:537:    acl-2.4.0-1.el9_8.x86_64                                    annobin-12.98-2.el9.x86_64                                  cpp-11.5.0-14.el9.alma.1.x86_64                                  
 DEBUG util.py:537:    dbus-1:1.12.20-8.el9.x86_64                                 dbus-broker-28-9.el9_8.x86_64                               dbus-common-1:1.12.20-8.el9.noarch                               
 DEBUG util.py:537:    expat-2.5.0-6.el9_8.5.x86_64                                gcc-11.5.0-14.el9.alma.1.x86_64                             gcc-c++-11.5.0-14.el9.alma.1.x86_64                              
-DEBUG util.py:537:    gcc-plugin-annobin-11.5.0-14.el9.alma.1.x86_64              glibc-devel-2.34-275.el9_8.x86_64                           glibc-headers-2.34-275.el9_8.x86_64                              
-DEBUG util.py:537:    gnupg2-2.3.3-5.el9_7.x86_64                                 gnutls-3.8.10-8.el9_8.x86_64                                kernel-headers-5.14.0-687.52.1.el9_8.x86_64                      
+DEBUG util.py:537:    gcc-plugin-annobin-11.5.0-14.el9.alma.1.x86_64              glibc-devel-2.34-283.el9_8.x86_64                           glibc-headers-2.34-283.el9_8.x86_64                              
+DEBUG util.py:537:    gnupg2-2.3.3-5.el9_7.x86_64                                 gnutls-3.8.10-9.el9_8.x86_64                                kernel-headers-5.14.0-687.56.1.el9_8.x86_64                      
 DEBUG util.py:537:    kmod-libs-28-11.el9.x86_64                                  libassuan-2.5.5-3.el9.x86_64                                libedit-3.1-39.20210216cvs.el9.x86_64                            
 DEBUG util.py:537:    libksba-1.5.1-7.el9.x86_64                                  libmpc-1.2.1-4.el9.x86_64                                   libseccomp-2.5.2-2.el9.x86_64                                    
 DEBUG util.py:537:    libstdc++-devel-11.5.0-14.el9.alma.1.x86_64                 libxcrypt-devel-4.4.18-3.el9.x86_64                         libzstd-devel-1.5.5-1.el9.x86_64                                 
 DEBUG util.py:537:    llvm-filesystem-21.1.8-2.el9.x86_64                         llvm-libs-21.1.8-2.el9.x86_64                               lmdb-libs-0.9.29-3.el9.x86_64                                    
 DEBUG util.py:537:    make-1:4.3-8.el9.x86_64                                     modsecurity-3.0.16-1.el9.x86_64                             nettle-3.10.1-1.el9.x86_64                                       
-DEBUG util.py:537:    npth-1.6-8.el9.x86_64                                       openssl-devel-1:3.5.8-1.el9_8.x86_64                        pcre2-devel-10.40-6.el9.x86_64                                   
-DEBUG util.py:537:    pcre2-utf16-10.40-6.el9.x86_64                              pcre2-utf32-10.40-6.el9.x86_64                              perl-4:5.32.1-484.el9_8.x86_64                                   
+DEBUG util.py:537:    npth-1.6-8.el9.x86_64                                       openssl-devel-1:3.5.8-2.el9_8.x86_64                        pcre2-devel-10.40-7.el9_8.x86_64                                 
+DEBUG util.py:537:    pcre2-utf16-10.40-7.el9_8.x86_64                            pcre2-utf32-10.40-7.el9_8.x86_64                            perl-4:5.32.1-484.el9_8.x86_64                                   
 DEBUG util.py:537:    perl-Algorithm-Diff-1.2010-4.el9.noarch                     perl-Archive-Tar-2.38-6.el9_8.2.noarch                      perl-Archive-Zip-1.68-6.el9.noarch                               
 DEBUG util.py:537:    perl-Attribute-Handlers-1.01-484.el9_8.noarch               perl-AutoSplit-5.74-484.el9_8.noarch                        perl-Benchmark-1.23-484.el9_8.noarch                             
 DEBUG util.py:537:    perl-CPAN-2.29-5.el9_6.noarch                               perl-CPAN-Meta-2.150010-460.el9.noarch                      perl-CPAN-Meta-Requirements-2.140-461.el9.noarch                 
@@ -2253,7 +2265,7 @@ DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'remount,priva
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'dee89e8e6bd54f15b5b7c699f24a4bba', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qa', '--root', '/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '0c68de238c424879bdcfe8a6e05f2362', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qa', '--root', '/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:537:  gpg-pubkey-b86b3716-61e69f29
 DEBUG util.py:537:  gpg-pubkey-3228467c-613798eb
 DEBUG util.py:537:  rust-srpm-macros-17-4.el9.noarch
@@ -2267,10 +2279,9 @@ DEBUG util.py:537:  perl-srpm-macros-1-41.el9.noarch
 DEBUG util.py:537:  openblas-srpm-macros-2-11.el9.noarch
 DEBUG util.py:537:  ocaml-srpm-macros-6-6.el9.noarch
 DEBUG util.py:537:  ghc-srpm-macros-1.5.0-6.el9.noarch
-DEBUG util.py:537:  tzdata-2026c-1.el9_8.noarch
+DEBUG util.py:537:  tzdata-2026e-1.el9_8.noarch
 DEBUG util.py:537:  publicsuffix-list-dafsa-20210518-3.el9.noarch
 DEBUG util.py:537:  pkgconf-m4-1.7.3-10.el9.noarch
-DEBUG util.py:537:  pcre2-syntax-10.40-6.el9.noarch
 DEBUG util.py:537:  ncurses-base-6.2-12.20210508.el9.noarch
 DEBUG util.py:537:  libssh-config-0.10.4-19.el9_8.noarch
 DEBUG util.py:537:  coreutils-common-8.32-41.el9_8.1.x86_64
@@ -2282,11 +2293,11 @@ DEBUG util.py:537:  filesystem-3.16-5.el9.x86_64
 DEBUG util.py:537:  basesystem-11-13.el9.noarch
 DEBUG util.py:537:  ncurses-libs-6.2-12.20210508.el9.x86_64
 DEBUG util.py:537:  bash-5.1.8-9.el9.x86_64
-DEBUG util.py:537:  glibc-gconv-extra-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-gconv-extra-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  libgcc-11.5.0-14.el9.alma.1.x86_64
-DEBUG util.py:537:  glibc-minimal-langpack-2.34-275.el9_8.x86_64
-DEBUG util.py:537:  glibc-common-2.34-275.el9_8.x86_64
-DEBUG util.py:537:  glibc-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-minimal-langpack-2.34-283.el9_8.x86_64
+DEBUG util.py:537:  glibc-common-2.34-283.el9_8.x86_64
+DEBUG util.py:537:  glibc-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  zlib-1.2.11-40.el9.x86_64
 DEBUG util.py:537:  xz-libs-5.2.5-8.el9_0.x86_64
 DEBUG util.py:537:  bzip2-libs-1.0.8-11.el9.x86_64
@@ -2316,7 +2327,7 @@ DEBUG util.py:537:  audit-libs-3.1.5-8.el9.x86_64
 DEBUG util.py:537:  libffi-3.4.2-8.el9.x86_64
 DEBUG util.py:537:  libsepol-3.6-3.el9.x86_64
 DEBUG util.py:537:  libsigsegv-2.13-4.el9.x86_64
-DEBUG util.py:537:  gawk-5.1.0-6.el9.x86_64
+DEBUG util.py:537:  gawk-5.1.0-6.el9_8.1.x86_64
 DEBUG util.py:537:  libsmartcols-2.37.4-25.el9.x86_64
 DEBUG util.py:537:  libtasn1-4.16.0-10.el9_8.x86_64
 DEBUG util.py:537:  p11-kit-0.26.4-1.el9_8.x86_64
@@ -2329,6 +2340,7 @@ DEBUG util.py:537:  zip-3.0-35.el9.x86_64
 DEBUG util.py:537:  zstd-1.5.5-1.el9.x86_64
 DEBUG util.py:537:  groff-base-1.22.4-10.el9.x86_64
 DEBUG util.py:537:  bzip2-1.0.8-11.el9.x86_64
+DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64
 DEBUG util.py:537:  info-6.7-15.el9.x86_64
 DEBUG util.py:537:  ed-1.14.2-12.el9.x86_64
 DEBUG util.py:537:  cpio-2.13-16.el9.x86_64
@@ -2336,7 +2348,7 @@ DEBUG util.py:537:  diffutils-3.7-12.el9.x86_64
 DEBUG util.py:537:  gdbm-libs-1.23-1.el9.x86_64
 DEBUG util.py:537:  json-c-0.14-11.el9.x86_64
 DEBUG util.py:537:  keyutils-libs-1.6.3-1.el9.x86_64
-DEBUG util.py:537:  libbrotli-1.0.9-9.el9_7.x86_64
+DEBUG util.py:537:  libbrotli-1.0.9-10.el9_8.x86_64
 DEBUG util.py:537:  libdb-5.3.28-57.el9_6.x86_64
 DEBUG util.py:537:  libeconf-0.4.1-7.el9_8.x86_64
 DEBUG util.py:537:  libgomp-11.5.0-14.el9.alma.1.x86_64
@@ -2352,12 +2364,11 @@ DEBUG util.py:537:  ncurses-6.2-12.20210508.el9.x86_64
 DEBUG util.py:537:  pcre-8.44-4.el9.x86_64
 DEBUG util.py:537:  grep-3.6-5.el9.x86_64
 DEBUG util.py:537:  xz-5.2.5-8.el9_0.x86_64
-DEBUG util.py:537:  pcre2-10.40-6.el9.x86_64
 DEBUG util.py:537:  libselinux-3.6-3.el9.x86_64
 DEBUG util.py:537:  sed-4.8-10.el9.x86_64
 DEBUG util.py:537:  findutils-4.8.0-7.el9.x86_64
-DEBUG util.py:537:  openssl-fips-provider-3.5.8-1.el9_8.x86_64
-DEBUG util.py:537:  openssl-libs-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-fips-provider-3.5.8-2.el9_8.x86_64
+DEBUG util.py:537:  openssl-libs-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  coreutils-8.32-41.el9_8.1.x86_64
 DEBUG util.py:537:  ca-certificates-2025.2.80_v9.0.305-91.el9.noarch
 DEBUG util.py:537:  libblkid-2.37.4-25.el9.x86_64
@@ -2429,7 +2440,7 @@ DEBUG util.py:537:  perl-Encode-3.08-462.el9.x86_64
 DEBUG util.py:537:  perl-libs-5.32.1-484.el9_8.x86_64
 DEBUG util.py:537:  perl-interpreter-5.32.1-484.el9_8.x86_64
 DEBUG util.py:537:  kernel-srpm-macros-1.0-14.el9.noarch
-DEBUG util.py:537:  openssl-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  libpwquality-1.4.4-8.el9.x86_64
 DEBUG util.py:537:  pam-1.5.1-28.el9_8.1.x86_64
 DEBUG util.py:537:  libevent-2.1.13-1.el9_8.x86_64
@@ -2450,7 +2461,7 @@ DEBUG util.py:537:  elfutils-debuginfod-client-0.194-1.el9.alma.1.x86_64
 DEBUG util.py:537:  binutils-gold-2.35.2-72.el9.x86_64
 DEBUG util.py:537:  binutils-2.35.2-72.el9.x86_64
 DEBUG util.py:537:  elfutils-0.194-1.el9.alma.1.x86_64
-DEBUG util.py:537:  gdb-minimal-16.3-3.el9.x86_64
+DEBUG util.py:537:  gdb-minimal-16.3-3.1.el9_8.x86_64
 DEBUG util.py:537:  debugedit-5.0-11.el9.x86_64
 DEBUG util.py:537:  rpm-build-libs-4.16.1.3-40.el9.x86_64
 DEBUG util.py:537:  fonts-srpm-macros-2.0.5-7.el9.1.noarch
@@ -2465,9 +2476,10 @@ DEBUG util.py:537:  R-srpm-macros-1.3.7-2.el9.noarch
 DEBUG util.py:537:  epel-rpm-macros-9-18.el9.noarch
 DEBUG util.py:537:  util-linux-2.37.4-25.el9.x86_64
 DEBUG util.py:537:  which-2.21-30.el9_6.x86_64
-DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.7.x86_64
-DEBUG util.py:537:  curl-7.76.1-40.el9_8.7.x86_64
-DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64
+DEBUG util.py:537:  pcre2-syntax-10.40-7.el9_8.noarch
+DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.8.x86_64
+DEBUG util.py:537:  curl-7.76.1-40.el9_8.8.x86_64
+DEBUG util.py:537:  pcre2-10.40-7.el9_8.x86_64
 DEBUG util.py:537:  perl-File-Find-1.37-484.el9_8.noarch
 DEBUG util.py:537:  perl-File-Copy-2.34-484.el9_8.noarch
 DEBUG util.py:537:  perl-ExtUtils-Manifest-1.73-4.el9.noarch
@@ -2620,14 +2632,14 @@ DEBUG util.py:537:  perl-Attribute-Handlers-1.01-484.el9_8.noarch
 DEBUG util.py:537:  perl-Algorithm-Diff-1.2010-4.el9.noarch
 DEBUG util.py:537:  perl-Text-Diff-1.45-13.el9.noarch
 DEBUG util.py:537:  perl-Archive-Tar-2.38-6.el9_8.2.noarch
-DEBUG util.py:537:  pcre2-utf32-10.40-6.el9.x86_64
-DEBUG util.py:537:  pcre2-utf16-10.40-6.el9.x86_64
+DEBUG util.py:537:  pcre2-utf32-10.40-7.el9_8.x86_64
+DEBUG util.py:537:  pcre2-utf16-10.40-7.el9_8.x86_64
 DEBUG util.py:537:  llvm-filesystem-21.1.8-2.el9.x86_64
 DEBUG util.py:537:  libstdc++-devel-11.5.0-14.el9.alma.1.x86_64
-DEBUG util.py:537:  kernel-headers-5.14.0-687.52.1.el9_8.x86_64
-DEBUG util.py:537:  glibc-headers-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  kernel-headers-5.14.0-687.56.1.el9_8.x86_64
+DEBUG util.py:537:  glibc-headers-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  libxcrypt-devel-4.4.18-3.el9.x86_64
-DEBUG util.py:537:  glibc-devel-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-devel-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  gcc-11.5.0-14.el9.alma.1.x86_64
 DEBUG util.py:537:  perl-Filter-1.60-4.el9.x86_64
 DEBUG util.py:537:  perl-encoding-3.00-462.el9.x86_64
@@ -2654,7 +2666,7 @@ DEBUG util.py:537:  perl-inc-latest-0.500-20.el9.noarch
 DEBUG util.py:537:  perl-Module-Build-0.42.31-9.el9.noarch
 DEBUG util.py:537:  npth-1.6-8.el9.x86_64
 DEBUG util.py:537:  nettle-3.10.1-1.el9.x86_64
-DEBUG util.py:537:  gnutls-3.8.10-8.el9_8.x86_64
+DEBUG util.py:537:  gnutls-3.8.10-9.el9_8.x86_64
 DEBUG util.py:537:  lmdb-libs-0.9.29-3.el9.x86_64
 DEBUG util.py:537:  libseccomp-2.5.2-2.el9.x86_64
 DEBUG util.py:537:  libksba-1.5.1-7.el9.x86_64
@@ -2675,9 +2687,9 @@ DEBUG util.py:537:  dbus-broker-28-9.el9_8.x86_64
 DEBUG util.py:537:  annobin-12.98-2.el9.x86_64
 DEBUG util.py:537:  modsecurity-3.0.16-1.el9.x86_64
 DEBUG util.py:537:  gcc-plugin-annobin-11.5.0-14.el9.alma.1.x86_64
-DEBUG util.py:537:  pcre2-devel-10.40-6.el9.x86_64
+DEBUG util.py:537:  pcre2-devel-10.40-7.el9_8.x86_64
 DEBUG util.py:537:  zlib-devel-1.2.11-40.el9.x86_64
-DEBUG util.py:537:  openssl-devel-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-devel-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  libzstd-devel-1.5.5-1.el9.x86_64
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:200:  kill orphans in chroot /var/lib/mock/alma+epel-9-x86_64/root
@@ -2701,7 +2713,7 @@ DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'remount,priva
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'd618bc2cb7bd4620bdf917a2e64add71', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qa', '--root', '/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'e59f6988482743c29d3456f62f4d3944', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qa', '--root', '/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:537:  gpg-pubkey-b86b3716-61e69f29
 DEBUG util.py:537:  gpg-pubkey-3228467c-613798eb
 DEBUG util.py:537:  rust-srpm-macros-17-4.el9.noarch
@@ -2715,10 +2727,9 @@ DEBUG util.py:537:  perl-srpm-macros-1-41.el9.noarch
 DEBUG util.py:537:  openblas-srpm-macros-2-11.el9.noarch
 DEBUG util.py:537:  ocaml-srpm-macros-6-6.el9.noarch
 DEBUG util.py:537:  ghc-srpm-macros-1.5.0-6.el9.noarch
-DEBUG util.py:537:  tzdata-2026c-1.el9_8.noarch
+DEBUG util.py:537:  tzdata-2026e-1.el9_8.noarch
 DEBUG util.py:537:  publicsuffix-list-dafsa-20210518-3.el9.noarch
 DEBUG util.py:537:  pkgconf-m4-1.7.3-10.el9.noarch
-DEBUG util.py:537:  pcre2-syntax-10.40-6.el9.noarch
 DEBUG util.py:537:  ncurses-base-6.2-12.20210508.el9.noarch
 DEBUG util.py:537:  libssh-config-0.10.4-19.el9_8.noarch
 DEBUG util.py:537:  coreutils-common-8.32-41.el9_8.1.x86_64
@@ -2730,11 +2741,11 @@ DEBUG util.py:537:  filesystem-3.16-5.el9.x86_64
 DEBUG util.py:537:  basesystem-11-13.el9.noarch
 DEBUG util.py:537:  ncurses-libs-6.2-12.20210508.el9.x86_64
 DEBUG util.py:537:  bash-5.1.8-9.el9.x86_64
-DEBUG util.py:537:  glibc-gconv-extra-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-gconv-extra-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  libgcc-11.5.0-14.el9.alma.1.x86_64
-DEBUG util.py:537:  glibc-minimal-langpack-2.34-275.el9_8.x86_64
-DEBUG util.py:537:  glibc-common-2.34-275.el9_8.x86_64
-DEBUG util.py:537:  glibc-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-minimal-langpack-2.34-283.el9_8.x86_64
+DEBUG util.py:537:  glibc-common-2.34-283.el9_8.x86_64
+DEBUG util.py:537:  glibc-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  zlib-1.2.11-40.el9.x86_64
 DEBUG util.py:537:  xz-libs-5.2.5-8.el9_0.x86_64
 DEBUG util.py:537:  bzip2-libs-1.0.8-11.el9.x86_64
@@ -2764,7 +2775,7 @@ DEBUG util.py:537:  audit-libs-3.1.5-8.el9.x86_64
 DEBUG util.py:537:  libffi-3.4.2-8.el9.x86_64
 DEBUG util.py:537:  libsepol-3.6-3.el9.x86_64
 DEBUG util.py:537:  libsigsegv-2.13-4.el9.x86_64
-DEBUG util.py:537:  gawk-5.1.0-6.el9.x86_64
+DEBUG util.py:537:  gawk-5.1.0-6.el9_8.1.x86_64
 DEBUG util.py:537:  libsmartcols-2.37.4-25.el9.x86_64
 DEBUG util.py:537:  libtasn1-4.16.0-10.el9_8.x86_64
 DEBUG util.py:537:  p11-kit-0.26.4-1.el9_8.x86_64
@@ -2777,6 +2788,7 @@ DEBUG util.py:537:  zip-3.0-35.el9.x86_64
 DEBUG util.py:537:  zstd-1.5.5-1.el9.x86_64
 DEBUG util.py:537:  groff-base-1.22.4-10.el9.x86_64
 DEBUG util.py:537:  bzip2-1.0.8-11.el9.x86_64
+DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64
 DEBUG util.py:537:  info-6.7-15.el9.x86_64
 DEBUG util.py:537:  ed-1.14.2-12.el9.x86_64
 DEBUG util.py:537:  cpio-2.13-16.el9.x86_64
@@ -2784,7 +2796,7 @@ DEBUG util.py:537:  diffutils-3.7-12.el9.x86_64
 DEBUG util.py:537:  gdbm-libs-1.23-1.el9.x86_64
 DEBUG util.py:537:  json-c-0.14-11.el9.x86_64
 DEBUG util.py:537:  keyutils-libs-1.6.3-1.el9.x86_64
-DEBUG util.py:537:  libbrotli-1.0.9-9.el9_7.x86_64
+DEBUG util.py:537:  libbrotli-1.0.9-10.el9_8.x86_64
 DEBUG util.py:537:  libdb-5.3.28-57.el9_6.x86_64
 DEBUG util.py:537:  libeconf-0.4.1-7.el9_8.x86_64
 DEBUG util.py:537:  libgomp-11.5.0-14.el9.alma.1.x86_64
@@ -2800,12 +2812,11 @@ DEBUG util.py:537:  ncurses-6.2-12.20210508.el9.x86_64
 DEBUG util.py:537:  pcre-8.44-4.el9.x86_64
 DEBUG util.py:537:  grep-3.6-5.el9.x86_64
 DEBUG util.py:537:  xz-5.2.5-8.el9_0.x86_64
-DEBUG util.py:537:  pcre2-10.40-6.el9.x86_64
 DEBUG util.py:537:  libselinux-3.6-3.el9.x86_64
 DEBUG util.py:537:  sed-4.8-10.el9.x86_64
 DEBUG util.py:537:  findutils-4.8.0-7.el9.x86_64
-DEBUG util.py:537:  openssl-fips-provider-3.5.8-1.el9_8.x86_64
-DEBUG util.py:537:  openssl-libs-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-fips-provider-3.5.8-2.el9_8.x86_64
+DEBUG util.py:537:  openssl-libs-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  coreutils-8.32-41.el9_8.1.x86_64
 DEBUG util.py:537:  ca-certificates-2025.2.80_v9.0.305-91.el9.noarch
 DEBUG util.py:537:  libblkid-2.37.4-25.el9.x86_64
@@ -2877,7 +2888,7 @@ DEBUG util.py:537:  perl-Encode-3.08-462.el9.x86_64
 DEBUG util.py:537:  perl-libs-5.32.1-484.el9_8.x86_64
 DEBUG util.py:537:  perl-interpreter-5.32.1-484.el9_8.x86_64
 DEBUG util.py:537:  kernel-srpm-macros-1.0-14.el9.noarch
-DEBUG util.py:537:  openssl-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  libpwquality-1.4.4-8.el9.x86_64
 DEBUG util.py:537:  pam-1.5.1-28.el9_8.1.x86_64
 DEBUG util.py:537:  libevent-2.1.13-1.el9_8.x86_64
@@ -2898,7 +2909,7 @@ DEBUG util.py:537:  elfutils-debuginfod-client-0.194-1.el9.alma.1.x86_64
 DEBUG util.py:537:  binutils-gold-2.35.2-72.el9.x86_64
 DEBUG util.py:537:  binutils-2.35.2-72.el9.x86_64
 DEBUG util.py:537:  elfutils-0.194-1.el9.alma.1.x86_64
-DEBUG util.py:537:  gdb-minimal-16.3-3.el9.x86_64
+DEBUG util.py:537:  gdb-minimal-16.3-3.1.el9_8.x86_64
 DEBUG util.py:537:  debugedit-5.0-11.el9.x86_64
 DEBUG util.py:537:  rpm-build-libs-4.16.1.3-40.el9.x86_64
 DEBUG util.py:537:  fonts-srpm-macros-2.0.5-7.el9.1.noarch
@@ -2913,9 +2924,10 @@ DEBUG util.py:537:  R-srpm-macros-1.3.7-2.el9.noarch
 DEBUG util.py:537:  epel-rpm-macros-9-18.el9.noarch
 DEBUG util.py:537:  util-linux-2.37.4-25.el9.x86_64
 DEBUG util.py:537:  which-2.21-30.el9_6.x86_64
-DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.7.x86_64
-DEBUG util.py:537:  curl-7.76.1-40.el9_8.7.x86_64
-DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64
+DEBUG util.py:537:  pcre2-syntax-10.40-7.el9_8.noarch
+DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.8.x86_64
+DEBUG util.py:537:  curl-7.76.1-40.el9_8.8.x86_64
+DEBUG util.py:537:  pcre2-10.40-7.el9_8.x86_64
 DEBUG util.py:537:  perl-File-Find-1.37-484.el9_8.noarch
 DEBUG util.py:537:  perl-File-Copy-2.34-484.el9_8.noarch
 DEBUG util.py:537:  perl-ExtUtils-Manifest-1.73-4.el9.noarch
@@ -3068,14 +3080,14 @@ DEBUG util.py:537:  perl-Attribute-Handlers-1.01-484.el9_8.noarch
 DEBUG util.py:537:  perl-Algorithm-Diff-1.2010-4.el9.noarch
 DEBUG util.py:537:  perl-Text-Diff-1.45-13.el9.noarch
 DEBUG util.py:537:  perl-Archive-Tar-2.38-6.el9_8.2.noarch
-DEBUG util.py:537:  pcre2-utf32-10.40-6.el9.x86_64
-DEBUG util.py:537:  pcre2-utf16-10.40-6.el9.x86_64
+DEBUG util.py:537:  pcre2-utf32-10.40-7.el9_8.x86_64
+DEBUG util.py:537:  pcre2-utf16-10.40-7.el9_8.x86_64
 DEBUG util.py:537:  llvm-filesystem-21.1.8-2.el9.x86_64
 DEBUG util.py:537:  libstdc++-devel-11.5.0-14.el9.alma.1.x86_64
-DEBUG util.py:537:  kernel-headers-5.14.0-687.52.1.el9_8.x86_64
-DEBUG util.py:537:  glibc-headers-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  kernel-headers-5.14.0-687.56.1.el9_8.x86_64
+DEBUG util.py:537:  glibc-headers-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  libxcrypt-devel-4.4.18-3.el9.x86_64
-DEBUG util.py:537:  glibc-devel-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-devel-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  gcc-11.5.0-14.el9.alma.1.x86_64
 DEBUG util.py:537:  perl-Filter-1.60-4.el9.x86_64
 DEBUG util.py:537:  perl-encoding-3.00-462.el9.x86_64
@@ -3102,7 +3114,7 @@ DEBUG util.py:537:  perl-inc-latest-0.500-20.el9.noarch
 DEBUG util.py:537:  perl-Module-Build-0.42.31-9.el9.noarch
 DEBUG util.py:537:  npth-1.6-8.el9.x86_64
 DEBUG util.py:537:  nettle-3.10.1-1.el9.x86_64
-DEBUG util.py:537:  gnutls-3.8.10-8.el9_8.x86_64
+DEBUG util.py:537:  gnutls-3.8.10-9.el9_8.x86_64
 DEBUG util.py:537:  lmdb-libs-0.9.29-3.el9.x86_64
 DEBUG util.py:537:  libseccomp-2.5.2-2.el9.x86_64
 DEBUG util.py:537:  libksba-1.5.1-7.el9.x86_64
@@ -3123,9 +3135,9 @@ DEBUG util.py:537:  dbus-broker-28-9.el9_8.x86_64
 DEBUG util.py:537:  annobin-12.98-2.el9.x86_64
 DEBUG util.py:537:  modsecurity-3.0.16-1.el9.x86_64
 DEBUG util.py:537:  gcc-plugin-annobin-11.5.0-14.el9.alma.1.x86_64
-DEBUG util.py:537:  pcre2-devel-10.40-6.el9.x86_64
+DEBUG util.py:537:  pcre2-devel-10.40-7.el9_8.x86_64
 DEBUG util.py:537:  zlib-devel-1.2.11-40.el9.x86_64
-DEBUG util.py:537:  openssl-devel-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-devel-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  libzstd-devel-1.5.5-1.el9.x86_64
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:200:  kill orphans in chroot /var/lib/mock/alma+epel-9-x86_64/root
@@ -3168,7 +3180,7 @@ DEBUG util.py:717:  child environment: None
 DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/alma+epel-9-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
-DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.ow0x98l1', '/var/lib/mock/alma+epel-9-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.7ydvuxb0', '/var/lib/mock/alma+epel-9-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:688:  Child return code was: 0
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64/root/sys/fs/selinux
 DEBUG util.py:717:  child environment: None
@@ -3186,21 +3198,21 @@ DEBUG util.py:717:  child environment: None
 DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:688:  Child return code was: 0
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/alma+epel-9-x86_64/root/installation-homedir
-DEBUG package_manager.py:296:  ['/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/mock/alma+epel-9-x86_64/root/', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/alma+epel-9-x86_64/root//builddir/build/SRPMS/nginx-1.30.5-1.alma9.src.rpm']
+DEBUG package_manager.py:296:  ['/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/mock/alma+epel-9-x86_64/root/', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/alma+epel-9-x86_64/root//builddir/build/SRPMS/nginx-1.30.6-1.alma9.src.rpm']
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '0ae8935a4c40439e91bbf894a4b9d996', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/var/lib/mock/alma+epel-9-x86_64/root/installation-homedir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--setenv=LC_MESSAGES=C.UTF-8', '/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/mock/alma+epel-9-x86_64/root/', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/alma+epel-9-x86_64/root//builddir/build/SRPMS/nginx-1.30.5-1.alma9.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/alma+epel-9-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '5b8413698575411cada0e3d7d4508a9c', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/var/lib/mock/alma+epel-9-x86_64/root/installation-homedir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--setenv=LC_MESSAGES=C.UTF-8', '/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/mock/alma+epel-9-x86_64/root/', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/alma+epel-9-x86_64/root//builddir/build/SRPMS/nginx-1.30.6-1.alma9.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/alma+epel-9-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:535:  No matches found for the following disable plugin patterns: local, spacewalk, versionlock
-DEBUG util.py:537:  AlmaLinux 9 - BaseOS                                                                                                                                         2.2 kB/s | 3.8 kB     00:01    
-DEBUG util.py:537:  AlmaLinux 9 - AppStream                                                                                                                                      4.4 kB/s | 4.2 kB     00:00    
-DEBUG util.py:537:  AlmaLinux 9 - CRB                                                                                                                                            5.2 kB/s | 4.2 kB     00:00    
-DEBUG util.py:537:  AlmaLinux 9 - Extras                                                                                                                                         3.9 kB/s | 3.3 kB     00:00    
-DEBUG util.py:537:  Extra Packages for Enterprise Linux 9 - x86_64                                                                                                               4.3 kB/s | 7.4 kB     00:01    
+DEBUG util.py:537:  AlmaLinux 9 - BaseOS                                                                                                                                         4.0 kB/s | 3.8 kB     00:00    
+DEBUG util.py:537:  AlmaLinux 9 - AppStream                                                                                                                                      5.1 kB/s | 4.2 kB     00:00    
+DEBUG util.py:537:  AlmaLinux 9 - CRB                                                                                                                                            5.1 kB/s | 4.2 kB     00:00    
+DEBUG util.py:537:  AlmaLinux 9 - Extras                                                                                                                                         3.2 kB/s | 3.3 kB     00:01    
+DEBUG util.py:537:  Extra Packages for Enterprise Linux 9 - x86_64                                                                                                                12 kB/s |  10 kB     00:00    
 DEBUG util.py:537:  mock-localrepo                                                                                                                                               2.9 MB/s | 3.0 kB     00:00    
 DEBUG util.py:537:  Package libzstd-devel-1.5.5-1.el9.x86_64 is already installed.
 DEBUG util.py:537:  Package modsecurity-3.0.16-1.el9.x86_64 is already installed.
-DEBUG util.py:537:  Package openssl-devel-1:3.5.8-1.el9_8.x86_64 is already installed.
-DEBUG util.py:537:  Package pcre2-devel-10.40-6.el9.x86_64 is already installed.
+DEBUG util.py:537:  Package openssl-devel-1:3.5.8-2.el9_8.x86_64 is already installed.
+DEBUG util.py:537:  Package pcre2-devel-10.40-7.el9_8.x86_64 is already installed.
 DEBUG util.py:537:  Package perl-4:5.32.1-484.el9_8.x86_64 is already installed.
 DEBUG util.py:537:  Package pkgconf-pkg-config-1.7.3-10.el9.x86_64 is already installed.
 DEBUG util.py:537:  Package systemd-252-67.el9_8.6.alma.1.x86_64 is already installed.
@@ -3254,7 +3266,7 @@ DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'remount,priva
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '3dcc80e3030b4e0dbcf2ef713dcae32a', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qa', '--root', '/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '0a392a8edb0448b79ae0900b890c2de1', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/rpm', '-qa', '--root', '/var/lib/mock/alma+epel-9-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:537:  gpg-pubkey-b86b3716-61e69f29
 DEBUG util.py:537:  gpg-pubkey-3228467c-613798eb
 DEBUG util.py:537:  rust-srpm-macros-17-4.el9.noarch
@@ -3268,10 +3280,9 @@ DEBUG util.py:537:  perl-srpm-macros-1-41.el9.noarch
 DEBUG util.py:537:  openblas-srpm-macros-2-11.el9.noarch
 DEBUG util.py:537:  ocaml-srpm-macros-6-6.el9.noarch
 DEBUG util.py:537:  ghc-srpm-macros-1.5.0-6.el9.noarch
-DEBUG util.py:537:  tzdata-2026c-1.el9_8.noarch
+DEBUG util.py:537:  tzdata-2026e-1.el9_8.noarch
 DEBUG util.py:537:  publicsuffix-list-dafsa-20210518-3.el9.noarch
 DEBUG util.py:537:  pkgconf-m4-1.7.3-10.el9.noarch
-DEBUG util.py:537:  pcre2-syntax-10.40-6.el9.noarch
 DEBUG util.py:537:  ncurses-base-6.2-12.20210508.el9.noarch
 DEBUG util.py:537:  libssh-config-0.10.4-19.el9_8.noarch
 DEBUG util.py:537:  coreutils-common-8.32-41.el9_8.1.x86_64
@@ -3283,11 +3294,11 @@ DEBUG util.py:537:  filesystem-3.16-5.el9.x86_64
 DEBUG util.py:537:  basesystem-11-13.el9.noarch
 DEBUG util.py:537:  ncurses-libs-6.2-12.20210508.el9.x86_64
 DEBUG util.py:537:  bash-5.1.8-9.el9.x86_64
-DEBUG util.py:537:  glibc-gconv-extra-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-gconv-extra-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  libgcc-11.5.0-14.el9.alma.1.x86_64
-DEBUG util.py:537:  glibc-minimal-langpack-2.34-275.el9_8.x86_64
-DEBUG util.py:537:  glibc-common-2.34-275.el9_8.x86_64
-DEBUG util.py:537:  glibc-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-minimal-langpack-2.34-283.el9_8.x86_64
+DEBUG util.py:537:  glibc-common-2.34-283.el9_8.x86_64
+DEBUG util.py:537:  glibc-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  zlib-1.2.11-40.el9.x86_64
 DEBUG util.py:537:  xz-libs-5.2.5-8.el9_0.x86_64
 DEBUG util.py:537:  bzip2-libs-1.0.8-11.el9.x86_64
@@ -3317,7 +3328,7 @@ DEBUG util.py:537:  audit-libs-3.1.5-8.el9.x86_64
 DEBUG util.py:537:  libffi-3.4.2-8.el9.x86_64
 DEBUG util.py:537:  libsepol-3.6-3.el9.x86_64
 DEBUG util.py:537:  libsigsegv-2.13-4.el9.x86_64
-DEBUG util.py:537:  gawk-5.1.0-6.el9.x86_64
+DEBUG util.py:537:  gawk-5.1.0-6.el9_8.1.x86_64
 DEBUG util.py:537:  libsmartcols-2.37.4-25.el9.x86_64
 DEBUG util.py:537:  libtasn1-4.16.0-10.el9_8.x86_64
 DEBUG util.py:537:  p11-kit-0.26.4-1.el9_8.x86_64
@@ -3330,6 +3341,7 @@ DEBUG util.py:537:  zip-3.0-35.el9.x86_64
 DEBUG util.py:537:  zstd-1.5.5-1.el9.x86_64
 DEBUG util.py:537:  groff-base-1.22.4-10.el9.x86_64
 DEBUG util.py:537:  bzip2-1.0.8-11.el9.x86_64
+DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64
 DEBUG util.py:537:  info-6.7-15.el9.x86_64
 DEBUG util.py:537:  ed-1.14.2-12.el9.x86_64
 DEBUG util.py:537:  cpio-2.13-16.el9.x86_64
@@ -3337,7 +3349,7 @@ DEBUG util.py:537:  diffutils-3.7-12.el9.x86_64
 DEBUG util.py:537:  gdbm-libs-1.23-1.el9.x86_64
 DEBUG util.py:537:  json-c-0.14-11.el9.x86_64
 DEBUG util.py:537:  keyutils-libs-1.6.3-1.el9.x86_64
-DEBUG util.py:537:  libbrotli-1.0.9-9.el9_7.x86_64
+DEBUG util.py:537:  libbrotli-1.0.9-10.el9_8.x86_64
 DEBUG util.py:537:  libdb-5.3.28-57.el9_6.x86_64
 DEBUG util.py:537:  libeconf-0.4.1-7.el9_8.x86_64
 DEBUG util.py:537:  libgomp-11.5.0-14.el9.alma.1.x86_64
@@ -3353,12 +3365,11 @@ DEBUG util.py:537:  ncurses-6.2-12.20210508.el9.x86_64
 DEBUG util.py:537:  pcre-8.44-4.el9.x86_64
 DEBUG util.py:537:  grep-3.6-5.el9.x86_64
 DEBUG util.py:537:  xz-5.2.5-8.el9_0.x86_64
-DEBUG util.py:537:  pcre2-10.40-6.el9.x86_64
 DEBUG util.py:537:  libselinux-3.6-3.el9.x86_64
 DEBUG util.py:537:  sed-4.8-10.el9.x86_64
 DEBUG util.py:537:  findutils-4.8.0-7.el9.x86_64
-DEBUG util.py:537:  openssl-fips-provider-3.5.8-1.el9_8.x86_64
-DEBUG util.py:537:  openssl-libs-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-fips-provider-3.5.8-2.el9_8.x86_64
+DEBUG util.py:537:  openssl-libs-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  coreutils-8.32-41.el9_8.1.x86_64
 DEBUG util.py:537:  ca-certificates-2025.2.80_v9.0.305-91.el9.noarch
 DEBUG util.py:537:  libblkid-2.37.4-25.el9.x86_64
@@ -3430,7 +3441,7 @@ DEBUG util.py:537:  perl-Encode-3.08-462.el9.x86_64
 DEBUG util.py:537:  perl-libs-5.32.1-484.el9_8.x86_64
 DEBUG util.py:537:  perl-interpreter-5.32.1-484.el9_8.x86_64
 DEBUG util.py:537:  kernel-srpm-macros-1.0-14.el9.noarch
-DEBUG util.py:537:  openssl-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  libpwquality-1.4.4-8.el9.x86_64
 DEBUG util.py:537:  pam-1.5.1-28.el9_8.1.x86_64
 DEBUG util.py:537:  libevent-2.1.13-1.el9_8.x86_64
@@ -3451,7 +3462,7 @@ DEBUG util.py:537:  elfutils-debuginfod-client-0.194-1.el9.alma.1.x86_64
 DEBUG util.py:537:  binutils-gold-2.35.2-72.el9.x86_64
 DEBUG util.py:537:  binutils-2.35.2-72.el9.x86_64
 DEBUG util.py:537:  elfutils-0.194-1.el9.alma.1.x86_64
-DEBUG util.py:537:  gdb-minimal-16.3-3.el9.x86_64
+DEBUG util.py:537:  gdb-minimal-16.3-3.1.el9_8.x86_64
 DEBUG util.py:537:  debugedit-5.0-11.el9.x86_64
 DEBUG util.py:537:  rpm-build-libs-4.16.1.3-40.el9.x86_64
 DEBUG util.py:537:  fonts-srpm-macros-2.0.5-7.el9.1.noarch
@@ -3466,9 +3477,10 @@ DEBUG util.py:537:  R-srpm-macros-1.3.7-2.el9.noarch
 DEBUG util.py:537:  epel-rpm-macros-9-18.el9.noarch
 DEBUG util.py:537:  util-linux-2.37.4-25.el9.x86_64
 DEBUG util.py:537:  which-2.21-30.el9_6.x86_64
-DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.7.x86_64
-DEBUG util.py:537:  curl-7.76.1-40.el9_8.7.x86_64
-DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64
+DEBUG util.py:537:  pcre2-syntax-10.40-7.el9_8.noarch
+DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.8.x86_64
+DEBUG util.py:537:  curl-7.76.1-40.el9_8.8.x86_64
+DEBUG util.py:537:  pcre2-10.40-7.el9_8.x86_64
 DEBUG util.py:537:  perl-File-Find-1.37-484.el9_8.noarch
 DEBUG util.py:537:  perl-File-Copy-2.34-484.el9_8.noarch
 DEBUG util.py:537:  perl-ExtUtils-Manifest-1.73-4.el9.noarch
@@ -3621,14 +3633,14 @@ DEBUG util.py:537:  perl-Attribute-Handlers-1.01-484.el9_8.noarch
 DEBUG util.py:537:  perl-Algorithm-Diff-1.2010-4.el9.noarch
 DEBUG util.py:537:  perl-Text-Diff-1.45-13.el9.noarch
 DEBUG util.py:537:  perl-Archive-Tar-2.38-6.el9_8.2.noarch
-DEBUG util.py:537:  pcre2-utf32-10.40-6.el9.x86_64
-DEBUG util.py:537:  pcre2-utf16-10.40-6.el9.x86_64
+DEBUG util.py:537:  pcre2-utf32-10.40-7.el9_8.x86_64
+DEBUG util.py:537:  pcre2-utf16-10.40-7.el9_8.x86_64
 DEBUG util.py:537:  llvm-filesystem-21.1.8-2.el9.x86_64
 DEBUG util.py:537:  libstdc++-devel-11.5.0-14.el9.alma.1.x86_64
-DEBUG util.py:537:  kernel-headers-5.14.0-687.52.1.el9_8.x86_64
-DEBUG util.py:537:  glibc-headers-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  kernel-headers-5.14.0-687.56.1.el9_8.x86_64
+DEBUG util.py:537:  glibc-headers-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  libxcrypt-devel-4.4.18-3.el9.x86_64
-DEBUG util.py:537:  glibc-devel-2.34-275.el9_8.x86_64
+DEBUG util.py:537:  glibc-devel-2.34-283.el9_8.x86_64
 DEBUG util.py:537:  gcc-11.5.0-14.el9.alma.1.x86_64
 DEBUG util.py:537:  perl-Filter-1.60-4.el9.x86_64
 DEBUG util.py:537:  perl-encoding-3.00-462.el9.x86_64
@@ -3655,7 +3667,7 @@ DEBUG util.py:537:  perl-inc-latest-0.500-20.el9.noarch
 DEBUG util.py:537:  perl-Module-Build-0.42.31-9.el9.noarch
 DEBUG util.py:537:  npth-1.6-8.el9.x86_64
 DEBUG util.py:537:  nettle-3.10.1-1.el9.x86_64
-DEBUG util.py:537:  gnutls-3.8.10-8.el9_8.x86_64
+DEBUG util.py:537:  gnutls-3.8.10-9.el9_8.x86_64
 DEBUG util.py:537:  lmdb-libs-0.9.29-3.el9.x86_64
 DEBUG util.py:537:  libseccomp-2.5.2-2.el9.x86_64
 DEBUG util.py:537:  libksba-1.5.1-7.el9.x86_64
@@ -3676,9 +3688,9 @@ DEBUG util.py:537:  dbus-broker-28-9.el9_8.x86_64
 DEBUG util.py:537:  annobin-12.98-2.el9.x86_64
 DEBUG util.py:537:  modsecurity-3.0.16-1.el9.x86_64
 DEBUG util.py:537:  gcc-plugin-annobin-11.5.0-14.el9.alma.1.x86_64
-DEBUG util.py:537:  pcre2-devel-10.40-6.el9.x86_64
+DEBUG util.py:537:  pcre2-devel-10.40-7.el9_8.x86_64
 DEBUG util.py:537:  zlib-devel-1.2.11-40.el9.x86_64
-DEBUG util.py:537:  openssl-devel-3.5.8-1.el9_8.x86_64
+DEBUG util.py:537:  openssl-devel-3.5.8-2.el9_8.x86_64
 DEBUG util.py:537:  libzstd-devel-1.5.5-1.el9.x86_64
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:200:  kill orphans in chroot /var/lib/mock/alma+epel-9-x86_64/root
@@ -3702,7 +3714,7 @@ DEBUG util.py:636:  Executing command: ['/bin/mount', '-n', '-o', 'remount,priva
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:717:  child environment: None
 DEBUG util.py:631:  Using nspawn with args ['--capability=cap_ipc_lock', '--resolv-conf=off']
-DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '4adbb8169c254f3ea7051268245f6dc7', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/sh', '-c', "rpm -qa --root '/var/lib/mock/alma+epel-9-x86_64/root' --qf '%{nevra} %{buildtime} %{size} installed\\n'"] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:636:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'f3d84e0141d14d3ea676bae22540f2fd', '-D', '/var/lib/mock/alma+epel-9-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--resolv-conf=off', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '/bin/sh', '-c', "rpm -qa --root '/var/lib/mock/alma+epel-9-x86_64/root' --qf '%{nevra} %{buildtime} %{size} installed\\n'"] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:537:  gpg-pubkey-b86b3716-61e69f29 1642503977 0 installed
 DEBUG util.py:537:  gpg-pubkey-3228467c-613798eb 1631033579 0 installed
 DEBUG util.py:537:  rust-srpm-macros-17-4.el9.noarch 1644579138 2447 installed
@@ -3716,10 +3728,9 @@ DEBUG util.py:537:  perl-srpm-macros-1-41.el9.noarch 1648211262 862 installed
 DEBUG util.py:537:  openblas-srpm-macros-2-11.el9.noarch 1644518888 104 installed
 DEBUG util.py:537:  ocaml-srpm-macros-6-6.el9.noarch 1645006823 745 installed
 DEBUG util.py:537:  ghc-srpm-macros-1.5.0-6.el9.noarch 1643558412 535 installed
-DEBUG util.py:537:  tzdata-2026c-1.el9_8.noarch 1786048717 1917852 installed
+DEBUG util.py:537:  tzdata-2026e-1.el9_8.noarch 1791460464 1954316 installed
 DEBUG util.py:537:  publicsuffix-list-dafsa-20210518-3.el9.noarch 1649930311 68815 installed
 DEBUG util.py:537:  pkgconf-m4-1.7.3-10.el9.noarch 1680812438 14187 installed
-DEBUG util.py:537:  pcre2-syntax-10.40-6.el9.noarch 1727910892 234324 installed
 DEBUG util.py:537:  ncurses-base-6.2-12.20210508.el9.noarch 1758446429 307293 installed
 DEBUG util.py:537:  libssh-config-0.10.4-19.el9_8.noarch 1788290188 277 installed
 DEBUG util.py:537:  coreutils-common-8.32-41.el9_8.1.x86_64 1789061463 10880361 installed
@@ -3731,11 +3742,11 @@ DEBUG util.py:537:  filesystem-3.16-5.el9.x86_64 1727902829 106 installed
 DEBUG util.py:537:  basesystem-11-13.el9.noarch 1643412490 0 installed
 DEBUG util.py:537:  ncurses-libs-6.2-12.20210508.el9.x86_64 1758446456 994415 installed
 DEBUG util.py:537:  bash-5.1.8-9.el9.x86_64 1714487592 7738730 installed
-DEBUG util.py:537:  glibc-gconv-extra-2.34-275.el9_8.x86_64 1785751685 8148318 installed
+DEBUG util.py:537:  glibc-gconv-extra-2.34-283.el9_8.x86_64 1791492180 8148318 installed
 DEBUG util.py:537:  libgcc-11.5.0-14.el9.alma.1.x86_64 1775332686 207028 installed
-DEBUG util.py:537:  glibc-minimal-langpack-2.34-275.el9_8.x86_64 1785751685 0 installed
-DEBUG util.py:537:  glibc-common-2.34-275.el9_8.x86_64 1785751685 1081358 installed
-DEBUG util.py:537:  glibc-2.34-275.el9_8.x86_64 1785751685 6451649 installed
+DEBUG util.py:537:  glibc-minimal-langpack-2.34-283.el9_8.x86_64 1791492180 0 installed
+DEBUG util.py:537:  glibc-common-2.34-283.el9_8.x86_64 1791492180 1081358 installed
+DEBUG util.py:537:  glibc-2.34-283.el9_8.x86_64 1791492180 6447601 installed
 DEBUG util.py:537:  zlib-1.2.11-40.el9.x86_64 1695720125 202921 installed
 DEBUG util.py:537:  xz-libs-5.2.5-8.el9_0.x86_64 1654677033 181589 installed
 DEBUG util.py:537:  bzip2-libs-1.0.8-11.el9.x86_64 1775338476 78116 installed
@@ -3765,7 +3776,7 @@ DEBUG util.py:537:  audit-libs-3.1.5-8.el9.x86_64 1775333529 338497 installed
 DEBUG util.py:537:  libffi-3.4.2-8.el9.x86_64 1695671656 65761 installed
 DEBUG util.py:537:  libsepol-3.6-3.el9.x86_64 1758446100 829195 installed
 DEBUG util.py:537:  libsigsegv-2.13-4.el9.x86_64 1644457015 50354 installed
-DEBUG util.py:537:  gawk-5.1.0-6.el9.x86_64 1648679084 1685614 installed
+DEBUG util.py:537:  gawk-5.1.0-6.el9_8.1.x86_64 1790720035 1675678 installed
 DEBUG util.py:537:  libsmartcols-2.37.4-25.el9.x86_64 1775340891 134787 installed
 DEBUG util.py:537:  libtasn1-4.16.0-10.el9_8.x86_64 1782346984 183364 installed
 DEBUG util.py:537:  p11-kit-0.26.4-1.el9_8.x86_64 1785766926 2974865 installed
@@ -3778,6 +3789,7 @@ DEBUG util.py:537:  zip-3.0-35.el9.x86_64 1680876147 741151 installed
 DEBUG util.py:537:  zstd-1.5.5-1.el9.x86_64 1741812953 1672821 installed
 DEBUG util.py:537:  groff-base-1.22.4-10.el9.x86_64 1643712259 4040414 installed
 DEBUG util.py:537:  bzip2-1.0.8-11.el9.x86_64 1775338476 94736 installed
+DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64 1790286962 1955948 installed
 DEBUG util.py:537:  info-6.7-15.el9.x86_64 1651410735 508035 installed
 DEBUG util.py:537:  ed-1.14.2-12.el9.x86_64 1643518920 129931 installed
 DEBUG util.py:537:  cpio-2.13-16.el9.x86_64 1643489457 1088179 installed
@@ -3785,7 +3797,7 @@ DEBUG util.py:537:  diffutils-3.7-12.el9.x86_64 1643480107 1467897 installed
 DEBUG util.py:537:  gdbm-libs-1:1.23-1.el9.x86_64 1727905839 128586 installed
 DEBUG util.py:537:  json-c-0.14-11.el9.x86_64 1644568776 79042 installed
 DEBUG util.py:537:  keyutils-libs-1.6.3-1.el9.x86_64 1680722150 55267 installed
-DEBUG util.py:537:  libbrotli-1.0.9-9.el9_7.x86_64 1770289647 782170 installed
+DEBUG util.py:537:  libbrotli-1.0.9-10.el9_8.x86_64 1791289382 782178 installed
 DEBUG util.py:537:  libdb-5.3.28-57.el9_6.x86_64 1750774368 1897918 installed
 DEBUG util.py:537:  libeconf-0.4.1-7.el9_8.x86_64 1780483738 45707 installed
 DEBUG util.py:537:  libgomp-11.5.0-14.el9.alma.1.x86_64 1775332686 421717 installed
@@ -3801,12 +3813,11 @@ DEBUG util.py:537:  ncurses-6.2-12.20210508.el9.x86_64 1758446456 624684 install
 DEBUG util.py:537:  pcre-8.44-4.el9.x86_64 1727906000 537720 installed
 DEBUG util.py:537:  grep-3.6-5.el9.x86_64 1643660491 857864 installed
 DEBUG util.py:537:  xz-5.2.5-8.el9_0.x86_64 1654677033 685939 installed
-DEBUG util.py:537:  pcre2-10.40-6.el9.x86_64 1727906236 652282 installed
 DEBUG util.py:537:  libselinux-3.6-3.el9.x86_64 1741822567 176845 installed
 DEBUG util.py:537:  sed-4.8-10.el9.x86_64 1775334250 812415 installed
 DEBUG util.py:537:  findutils-1:4.8.0-7.el9.x86_64 1727903031 1757006 installed
-DEBUG util.py:537:  openssl-fips-provider-1:3.5.8-1.el9_8.x86_64 1789379827 2595818 installed
-DEBUG util.py:537:  openssl-libs-1:3.5.8-1.el9_8.x86_64 1789379827 7490835 installed
+DEBUG util.py:537:  openssl-fips-provider-1:3.5.8-2.el9_8.x86_64 1791477186 2595674 installed
+DEBUG util.py:537:  openssl-libs-1:3.5.8-2.el9_8.x86_64 1791477186 7490787 installed
 DEBUG util.py:537:  coreutils-8.32-41.el9_8.1.x86_64 1789061463 5900298 installed
 DEBUG util.py:537:  ca-certificates-2025.2.80_v9.0.305-91.el9.noarch 1763547065 2791711 installed
 DEBUG util.py:537:  libblkid-2.37.4-25.el9.x86_64 1775340891 229729 installed
@@ -3878,7 +3889,7 @@ DEBUG util.py:537:  perl-Encode-4:3.08-462.el9.x86_64 1644597714 10240138 instal
 DEBUG util.py:537:  perl-libs-4:5.32.1-484.el9_8.x86_64 1789358801 8958043 installed
 DEBUG util.py:537:  perl-interpreter-4:5.32.1-484.el9_8.x86_64 1789358801 120078 installed
 DEBUG util.py:537:  kernel-srpm-macros-1.0-14.el9.noarch 1758093656 16948 installed
-DEBUG util.py:537:  openssl-1:3.5.8-1.el9_8.x86_64 1789379827 2283356 installed
+DEBUG util.py:537:  openssl-1:3.5.8-2.el9_8.x86_64 1791477186 2283348 installed
 DEBUG util.py:537:  libpwquality-1.4.4-8.el9.x86_64 1644464254 416424 installed
 DEBUG util.py:537:  pam-1.5.1-28.el9_8.1.x86_64 1788871304 1907782 installed
 DEBUG util.py:537:  libevent-2.1.13-1.el9_8.x86_64 1789566564 933651 installed
@@ -3899,7 +3910,7 @@ DEBUG util.py:537:  elfutils-debuginfod-client-0.194-1.el9.alma.1.x86_64 1775349
 DEBUG util.py:537:  binutils-gold-2.35.2-72.el9.x86_64 1775336087 2128619 installed
 DEBUG util.py:537:  binutils-2.35.2-72.el9.x86_64 1775336087 25215083 installed
 DEBUG util.py:537:  elfutils-0.194-1.el9.alma.1.x86_64 1775349538 3442470 installed
-DEBUG util.py:537:  gdb-minimal-16.3-3.el9.x86_64 1775369487 15230361 installed
+DEBUG util.py:537:  gdb-minimal-16.3-3.1.el9_8.x86_64 1790719346 15230681 installed
 DEBUG util.py:537:  debugedit-5.0-11.el9.x86_64 1758461450 194614 installed
 DEBUG util.py:537:  rpm-build-libs-4.16.1.3-40.el9.x86_64 1775353601 198446 installed
 DEBUG util.py:537:  fonts-srpm-macros-1:2.0.5-7.el9.1.noarch 1644638356 56503 installed
@@ -3914,9 +3925,10 @@ DEBUG util.py:537:  R-srpm-macros-1.3.7-2.el9.noarch 1777835640 3626 installed
 DEBUG util.py:537:  epel-rpm-macros-9-18.el9.noarch 1774638891 18704 installed
 DEBUG util.py:537:  util-linux-2.37.4-25.el9.x86_64 1775340891 11146991 installed
 DEBUG util.py:537:  which-2.21-30.el9_6.x86_64 1754374769 81900 installed
-DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.7.x86_64 1790006533 667534 installed
-DEBUG util.py:537:  curl-7.76.1-40.el9_8.7.x86_64 1790006533 684521 installed
-DEBUG util.py:537:  libxml2-2.9.13-14.el9_8.5.x86_64 1790286962 1955948 installed
+DEBUG util.py:537:  pcre2-syntax-10.40-7.el9_8.noarch 1791849005 234324 installed
+DEBUG util.py:537:  libcurl-7.76.1-40.el9_8.8.x86_64 1791779147 667582 installed
+DEBUG util.py:537:  curl-7.76.1-40.el9_8.8.x86_64 1791779147 684513 installed
+DEBUG util.py:537:  pcre2-10.40-7.el9_8.x86_64 1791849022 652050 installed
 DEBUG util.py:537:  perl-File-Find-0:1.37-484.el9_8.noarch 1789358836 39639 installed
 DEBUG util.py:537:  perl-File-Copy-0:2.34-484.el9_8.noarch 1789358836 21087 installed
 DEBUG util.py:537:  perl-ExtUtils-Manifest-1:1.73-4.el9.noarch 1645015079 86784 installed
@@ -4069,14 +4081,14 @@ DEBUG util.py:537:  perl-Attribute-Handlers-0:1.01-484.el9_8.noarch 1789358836 3
 DEBUG util.py:537:  perl-Algorithm-Diff-1.2010-4.el9.noarch 1645016165 110575 installed
 DEBUG util.py:537:  perl-Text-Diff-1.45-13.el9.noarch 1645017995 85715 installed
 DEBUG util.py:537:  perl-Archive-Tar-2.38-6.el9_8.2.noarch 1785732116 160084 installed
-DEBUG util.py:537:  pcre2-utf32-10.40-6.el9.x86_64 1727906236 558912 installed
-DEBUG util.py:537:  pcre2-utf16-10.40-6.el9.x86_64 1727906236 587664 installed
+DEBUG util.py:537:  pcre2-utf32-10.40-7.el9_8.x86_64 1791849022 558792 installed
+DEBUG util.py:537:  pcre2-utf16-10.40-7.el9_8.x86_64 1791849022 587536 installed
 DEBUG util.py:537:  llvm-filesystem-21.1.8-2.el9.x86_64 1775335211 0 installed
 DEBUG util.py:537:  libstdc++-devel-11.5.0-14.el9.alma.1.x86_64 1775332686 13578432 installed
-DEBUG util.py:537:  kernel-headers-5.14.0-687.52.1.el9_8.x86_64 1790670713 6672832 installed
-DEBUG util.py:537:  glibc-headers-2.34-275.el9_8.x86_64 1785751685 2181996 installed
+DEBUG util.py:537:  kernel-headers-5.14.0-687.56.1.el9_8.x86_64 1791967238 6673089 installed
+DEBUG util.py:537:  glibc-headers-2.34-283.el9_8.x86_64 1791492180 2181996 installed
 DEBUG util.py:537:  libxcrypt-devel-4.4.18-3.el9.x86_64 1644465890 31019 installed
-DEBUG util.py:537:  glibc-devel-2.34-275.el9_8.x86_64 1785751685 47528 installed
+DEBUG util.py:537:  glibc-devel-2.34-283.el9_8.x86_64 1791492180 47528 installed
 DEBUG util.py:537:  gcc-11.5.0-14.el9.alma.1.x86_64 1775332686 89923850 installed
 DEBUG util.py:537:  perl-Filter-2:1.60-4.el9.x86_64 1645001694 171929 installed
 DEBUG util.py:537:  perl-encoding-4:3.00-462.el9.x86_64 1644597714 148918 installed
@@ -4103,7 +4115,7 @@ DEBUG util.py:537:  perl-inc-latest-2:0.500-20.el9.noarch 1645002672 35853 insta
 DEBUG util.py:537:  perl-Module-Build-2:0.42.31-9.el9.noarch 1645011982 668479 installed
 DEBUG util.py:537:  npth-1.6-8.el9.x86_64 1645791541 50619 installed
 DEBUG util.py:537:  nettle-3.10.1-1.el9.x86_64 1741845579 1169768 installed
-DEBUG util.py:537:  gnutls-3.8.10-8.el9_8.x86_64 1786102884 4138847 installed
+DEBUG util.py:537:  gnutls-3.8.10-9.el9_8.x86_64 1791274432 4138799 installed
 DEBUG util.py:537:  lmdb-libs-0.9.29-3.el9.x86_64 1644479342 108552 installed
 DEBUG util.py:537:  libseccomp-2.5.2-2.el9.x86_64 1644458249 175269 installed
 DEBUG util.py:537:  libksba-1.5.1-7.el9.x86_64 1727801425 394494 installed
@@ -4124,9 +4136,9 @@ DEBUG util.py:537:  dbus-broker-28-9.el9_8.x86_64 1788192649 394069 installed
 DEBUG util.py:537:  annobin-12.98-2.el9.x86_64 1775332429 1212977 installed
 DEBUG util.py:537:  modsecurity-3.0.16-1.el9.x86_64 1782911374 2355117 installed
 DEBUG util.py:537:  gcc-plugin-annobin-11.5.0-14.el9.alma.1.x86_64 1775332686 57770 installed
-DEBUG util.py:537:  pcre2-devel-10.40-6.el9.x86_64 1727906236 1980925 installed
+DEBUG util.py:537:  pcre2-devel-10.40-7.el9_8.x86_64 1791849022 1980925 installed
 DEBUG util.py:537:  zlib-devel-1.2.11-40.el9.x86_64 1695720125 141092 installed
-DEBUG util.py:537:  openssl-devel-1:3.5.8-1.el9_8.x86_64 1789379827 5420386 installed
+DEBUG util.py:537:  openssl-devel-1:3.5.8-2.el9_8.x86_64 1791477186 5420386 installed
 DEBUG util.py:537:  libzstd-devel-1.5.5-1.el9.x86_64 1741812953 202817 installed
 DEBUG util.py:688:  Child return code was: 0
 DEBUG util.py:200:  kill orphans in chroot /var/lib/mock/alma+epel-9-x86_64/root
